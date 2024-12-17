@@ -89,7 +89,7 @@
                 </div>
             </div>
         </nav>
-        @if (session('mensajeOk'))
+@if (session('mensajeOk'))
 <script>
     Swal.fire({
   position: "top-end",

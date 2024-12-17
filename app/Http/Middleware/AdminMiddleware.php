@@ -20,7 +20,7 @@ class AdminMiddleware
         return $next($request);
         };
 
-    return redirect('/home');
+        return redirect()->route('home')->with('mensajeNo','Error de Permisos.');
     //    return $next($request);
     }
 }

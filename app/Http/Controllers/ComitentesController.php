@@ -50,9 +50,17 @@ class ComitentesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(comitentes $comitentes)
-    {
-        //
+    public function edit(Request $request){
+        if(!$request->activo){
+            $request->activo=0;
+        }else{
+            $request->activo=1;
+        }
+        $upd = comitentes::find($request->id);
+        $upd->comitente = $request->name;
+        $upd->activo = $request->activo;
+        $upd->save();
+        return redirect()->route('lscomitentes')->with('mensajeOk',$upd->comitente.' Se modificó correctamente.');
     }
 
     /**

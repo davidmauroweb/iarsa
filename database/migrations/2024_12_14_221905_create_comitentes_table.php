@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('comitentes', function (Blueprint $table) {
             $table->id();
             $table->string('comitente', length: 50)->nullable('false');
+            $table->boolean('activo')->default(1);
             $table->timestamps();
         });
     }

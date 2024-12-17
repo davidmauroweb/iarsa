@@ -16,3 +16,4 @@ Route::put('/du/{u}', [App\Http\Controllers\Auth\RegisterController::class, 'mus
 //COMITENTES
 Route::get('/comitentes', [App\Http\Controllers\ComitentesController::class, 'index'])->name('lscomitentes');
 Route::post('/ncom', [App\Http\Controllers\ComitentesController::class, 'nuevo'])->name('ncom');
+Route::post('/ecom', [App\Http\Controllers\ComitentesController::class, 'edit'])->name('ecom');
