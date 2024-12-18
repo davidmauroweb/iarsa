@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{HomeController,Controller};
+use App\Http\Controllers\{HomeController,Controller,EquiposController};
 
 Route::get('/', function () {
     return view('auth/login');
@@ -17,3 +17,7 @@ Route::put('/du/{u}', [App\Http\Controllers\Auth\RegisterController::class, 'mus
 Route::get('/comitentes', [App\Http\Controllers\ComitentesController::class, 'index'])->name('lscomitentes');
 Route::post('/ncom', [App\Http\Controllers\ComitentesController::class, 'nuevo'])->name('ncom');
 Route::post('/ecom', [App\Http\Controllers\ComitentesController::class, 'edit'])->name('ecom');
+//EQUIPAMIENTO
+Route::get('/equipos', [EquiposController::class, 'index'])->name('lsequipos');
+Route::post('/nequipos', [EquiposController::class, 'nuevo'])->name('nequipos');
+Route::post('/eequipos', [EquiposController::class, 'edit'])->name('eequipos');

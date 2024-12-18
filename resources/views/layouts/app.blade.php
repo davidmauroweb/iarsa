@@ -67,16 +67,19 @@
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     @if (Auth::user()->rol == "adm")
                                     <a class="dropdown-item" href="{{ route('lsus') }}">
-                                        Usuarios
+                                    <i class="bi bi-people-fill"></i> Usuarios
                                     </a>
                                     <a class="dropdown-item" href="{{ route('lscomitentes') }}">
-                                        Comitentes
+                                    <i class="bi bi-hospital-fill"></i> Comitentes
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('lsequipos') }}">
+                                    <i class="bi bi-truck-front-fill"></i> Equipos
                                     </a>
                                     @endif
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        <i class="bi bi-box-arrow-left"></i> {{ __('Logout') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
