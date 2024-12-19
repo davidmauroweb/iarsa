@@ -11,7 +11,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //USUARIOS
 Route::get('/lsusers', [App\Http\Controllers\lsusers::class, 'lista'])->name('lsus');
 Route::post('/nus', [App\Http\Controllers\Auth\RegisterController::class, 'nuevo'])->name('nus');
-Route::delete('/du/{u}', [App\Http\Controllers\Auth\RegisterController::class, 'del'])->name('dus');
+Route::delete('/du/{u}', [App\Http\Controllers\lsusers::class, 'invertir'])->name('dus');
 Route::put('/du/{u}', [App\Http\Controllers\Auth\RegisterController::class, 'mus'])->name('mus');
 //COMITENTES
 Route::get('/comitentes', [App\Http\Controllers\ComitentesController::class, 'index'])->name('lscomitentes');

@@ -82,12 +82,7 @@ class RegisterController extends Controller
         $Ingreso->save();
         return redirect()->route('lsus')->with('mensajeOk',$Ingreso->name.' Se cargó correctamente.');
     }
-    protected function del(User $u)
-    {
-        $Del = User::find($u->id);
-        $Del->delete();
-        return redirect()->route('lsus')->with('mensajeOk',$Del->name.' Ha sido Eliminado.');
-    }
+
     protected function mus(Request $request, User $u)
     {
         $Mus = User::find($u->id);

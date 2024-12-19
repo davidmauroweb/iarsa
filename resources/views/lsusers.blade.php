@@ -22,7 +22,7 @@
                         @foreach ($usr as $u)
                         <tr>
                             <td>{{$u->id}}</td>
-                            <td>{{$u->name}}</td>
+                            <td @if($u->activo==0) class="text-secondary" @endif >{{$u->name}}</td>
                             <td><i class="bi bi-person-fill
                                 @if ($u->rol=="adm") text-danger
                                 @elseif ($u->rol=="opr") text-secondary
@@ -30,7 +30,7 @@
                                 @endif
                                 "></i>
                             </td>
-                            <td>{{$u->email}}</td>
+                            <td @if($u->activo==0) class="text-secondary" @endif >{{$u->email}}</td>
                             <td>
                             <!-- modal cambio de clave -->
                             <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#cl{{$u->id}}"><i class="bi bi-pencil-fill"></i></button>
@@ -77,10 +77,18 @@
                             <form action="{{route('dus', $u->id)}}" method="post">
                                     @csrf
                                     @method('delete')
-                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('¿Desea Quitar a  {{$u->name}}?')" title="Eliminar"
-                                    @if ($u->rol=='adm')
-                                        disabled
-                                        @endif><i class="bi bi-trash-fill"></i></button>
+                                    @if($u->activo==1)
+                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('¿Desea Desactivar a  {{$u->name}}?')" title="Desactivar"
+                                        @if ($u->rol=='adm')
+                                            disabled
+                                        @endif><i class="bi bi-person-fill-x"></i></button>
+                                    @else
+                                        <button type="submit" class="btn btn-success btn-sm" onclick="return confirm('¿Desea Activar a  {{$u->name}}?')" title="Activar"
+                                        @if ($u->rol=='adm')
+                                            disabled
+                                        @endif><i class="bi bi-person-fill-check"></i></button>
+                                    @endif
+                                        <input type="hidden" name="active" value="{{$u->activo}}">
                                     </form>
                             </td>
                         </tr>

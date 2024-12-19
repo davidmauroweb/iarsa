@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
+use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -37,4 +39,20 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
         $this->middleware('auth')->only('logout');
     }
+    //public function authenticate(Request $request)
+public function login(Request $request)
+{
+    $credentials = $request->validate([
+        'email' => ['required', 'email'],
+        'password' => ['required'],
+    ]);
+
+   
+ if (Auth::attempt(['email' => $request->email, 'password' => $request->password, 'activo' => 1])) {
+            return redirect()->intended('home');
+        }
+return back()->withErrors([
+        'email' => 'Test',
+    ])->onlyInput('email');
+}
 }
