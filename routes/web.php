@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{HomeController,Controller,EquiposController};
+use App\Http\Controllers\{HomeController,Controller,EquiposController,ObrasController};
 
 Route::get('/', function () {
     return view('auth/login');
@@ -21,3 +21,7 @@ Route::post('/ecom', [App\Http\Controllers\ComitentesController::class, 'edit'])
 Route::get('/equipos', [EquiposController::class, 'index'])->name('lsequipos');
 Route::post('/nequipos', [EquiposController::class, 'nuevo'])->name('nequipos');
 Route::post('/eequipos', [EquiposController::class, 'edit'])->name('eequipos');
+//OBRAS
+Route::get('/obras', [ObrasController::class, 'index'])->name('lsobras');
+Route::post('/nobras', [ObrasController::class, 'nuevo'])->name('nobras');
+Route::post('/eobras', [ObrasController::class, 'edit'])->name('eobras');

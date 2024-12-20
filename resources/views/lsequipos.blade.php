@@ -23,7 +23,7 @@
                     </thead>
                     <tbody>
                         @foreach ($equipos as $u)
-                        <tr>
+                        <tr  @if($u->activo==0) class="table-warning" @endif >
                             @php $resto = $u->max-$u->control @endphp
                             <td>{{$u->codigo}}</td>
                             <td>{{$u->tipo}}</td>
@@ -85,25 +85,25 @@
                             <div class="row mb-3">
                             <label for="max" class="col-md-4 col-form-label text-md-end">Máximo</label>
                             <div class="col-md-6">
-                                <input id="max" type="text" class="form-control" name="max" value="{{$u->max}}" required autocomplete="max" autofocus>
+                                <input id="max" type="number" class="form-control" name="max" value="{{$u->max}}" required autocomplete="max" autofocus>
                             </div>
                             </div>
                             <div class="row mb-3">
                             <label for="control" class="col-md-4 col-form-label text-md-end">Control</label>
                             <div class="col-md-6">
-                                <input id="control" type="text" class="form-control" name="control" value="{{$u->control}}" required autocomplete="control" autofocus>
+                                <input id="control" type="number" class="form-control" name="control" value="{{$u->control}}" required autocomplete="control" autofocus>
                             </div>
                             </div>
                             <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end">Activo?</label>
-                            <div class="col-md-6">
+                            <div class="col-md-6  mt-2 pl-4">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="activo" name="activo" @if($u->activo==1) checked @endif>
                             </div>
                             </div>
                             </div><!-- Modal Body-->
                             <div class="modal-footer">
-                                <button type="submit" class="btn btn-success btn-sm">Agregar</button>
+                                <button type="submit" class="btn btn-success btn-sm">Editar</button>
                             </div>
                         </form>
                                                 </div>
@@ -169,13 +169,13 @@
                             <div class="row mb-3">
                             <label for="max" class="col-md-4 col-form-label text-md-end">Máximo</label>
                             <div class="col-md-6">
-                                <input id="max" type="text" class="form-control" name="max" value="" required autocomplete="max" autofocus>
+                                <input id="max" type="number" class="form-control" name="max" value="" required autocomplete="max" autofocus>
                             </div>
                             </div>
                             <div class="row mb-3">
                             <label for="control" class="col-md-4 col-form-label text-md-end">Control</label>
                             <div class="col-md-6">
-                                <input id="control" type="text" class="form-control" name="control" value="0" required autocomplete="control" autofocus>
+                                <input id="control" type="number" class="form-control" name="control" value="0" required autocomplete="control" autofocus>
                             </div>
                             </div>
                             <div class="row mb-3">

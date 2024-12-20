@@ -10,19 +10,19 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>#</th>
+                            <th></th>
                             <th>Nombre</th>
                             <th>Rol*</th>
                             <th>Mail</th>
-                            <th>Clave</th>
-                            <th>Eliminar</th>
+                            <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($usr as $u)
-                        <tr>
+                        <tr  @if($u->activo==0) class="table-warning" @endif >
                             <td>{{$u->id}}</td>
-                            <td @if($u->activo==0) class="text-secondary" @endif >{{$u->name}}</td>
+                            <td>{{$u->name}}</td>
                             <td><i class="bi bi-person-fill
                                 @if ($u->rol=="adm") text-danger
                                 @elseif ($u->rol=="opr") text-secondary
@@ -30,7 +30,7 @@
                                 @endif
                                 "></i>
                             </td>
-                            <td @if($u->activo==0) class="text-secondary" @endif >{{$u->email}}</td>
+                            <td>{{$u->email}}</td>
                             <td>
                             <!-- modal cambio de clave -->
                             <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#cl{{$u->id}}"><i class="bi bi-pencil-fill"></i></button>
@@ -65,7 +65,7 @@
                         </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" class="btn btn-primary btn-sm">Cambiar</button>
+                                <button type="submit" class="btn btn-primary btn-sm">Editar</button>
                             </div>
                         </form>
                         </div>

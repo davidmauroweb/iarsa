@@ -52,7 +52,7 @@ public function login(Request $request)
             return redirect()->intended('home');
         }
 return back()->withErrors([
-        'email' => 'Test',
+        'email' => 'Error : Email o Clave incorrecto',
     ])->onlyInput('email');
 }
 }

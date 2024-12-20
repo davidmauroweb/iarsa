@@ -11,7 +11,6 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>#</th>
                             <th></th>
                             <th>Nombre</th>
                             <th></th>
@@ -19,16 +18,11 @@
                     </thead>
                     <tbody>
                         @foreach ($comit as $u)
-                        <tr>
+                        <tr  @if($u->activo==0) class="table-warning" @endif >
                             <td>{{$u->id}}</td>
-                            <td>@if($u->activo==0)
-                            <i class="bi bi-person-fill-slash text-secondary"></i>
-                             @else
-                             <i class="bi bi-person-fill-check text-success"></i>
-                             @endif
-                            </td>
-                            <td>{{$u->comitente}}</td>
-                            <td> <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#edit{{$u->id}}"><i class="bi bi-pencil-square"></i></button>
+                            <td @if($u->activo==0) class="text-secondary"><i class="bi bi-person-fill-slash"> @else ><i class="bi bi-person-fill-check text-success"> @endif</i> {{$u->comitente}}</td>
+                            <td>
+ 				            <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#edit{{$u->id}}"><i class="bi bi-pencil-square"></i></button>
                                         <!-- ModalEdit -->
                                         <div class="modal fade" id="edit{{$u->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
@@ -50,21 +44,20 @@
                                                     <div class="row mb-3">
                                                     <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Activo') }}</label>
                                                     <div class="col-md-6">
-                                                    <div class="form-check">
+                                                    <div class="col-md-6  mt-2 pl-4">
                                                         <input class="form-check-input" type="checkbox" id="activo" name="activo" @if($u->activo==1) checked @endif>
                                                     </div>
                                                     </div>
                                                     </div>
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <button type="submit" class="btn btn-success btn-sm">Agregar</button>
+                                                        <button type="submit" class="btn btn-success btn-sm">Editar</button>
                                                     </div>
                                                 </form>
                                                 </div>
                                             </div>
                                         </div>
                                         <!-- ModalEdit -->
-                        
                         </td>
                         </tr>
                         @endforeach

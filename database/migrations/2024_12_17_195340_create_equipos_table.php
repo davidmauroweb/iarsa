@@ -22,6 +22,7 @@ return new class extends Migration
             $table->boolean('activo')->default(1);
             $table->unsignedSmallInteger('max');
             $table->unsignedSmallInteger('control');
+            $table->unique('codigo');
             $table->timestamps();
         });
     }
