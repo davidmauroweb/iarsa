@@ -15,7 +15,8 @@
                             <th>Nombre</th>
                             <th>Licitación</th>
                             <th>Comitente</th>
-                            <th></th>
+                            <th>Items</th>
+                            <th>Editar</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -25,6 +26,10 @@
                             <td>{{$u->nombre}}</td>
                             <td>{{$u->licitacion}}</td>
                             <td>{{$u->ncomi}}</td>
+                            <td>
+                                    <a href="{{ route('lsitems',$u->id) }}">
+                                    <button class="btn btn-sm btn-secondary"><i class="bi bi-list-check"></i></button>
+                                    </a></td>
                             <td>
  				            <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#edit{{$u->id}}"><i class="bi bi-pencil-square"></i></button>
                                         <!-- ModalEdit -->
@@ -49,7 +54,7 @@
                                                 <div class="row mb-3">
                                                 <label for="licitacion" class="col-md-4 col-form-label text-md-end">{{ __('Licitación') }}</label>
                                                 <div class="col-md-6">
-                                                    <input id="licitacion" type="text" class="form-control" name="licitacion" value="{{$u->licitacion}}" required autocomplete="name" autofocus>
+                                                    <input id="licitacion" type="text" class="form-control" name="licitacion" value="{{$u->licitacion}}" required autocomplete="name" maxlength="11" autofocus>
                                                 </div>
                                                 </div>
                                                 <div class="row mb-3">
@@ -105,7 +110,7 @@
                             <div class="row mb-3">
                             <label for="licitacion" class="col-md-4 col-form-label text-md-end">{{ __('Licitación') }}</label>
                             <div class="col-md-6">
-                                <input id="licitacion" type="text" class="form-control" name="licitacion" value="" required autocomplete="name" autofocus>
+                                <input id="licitacion" type="text" class="form-control" name="licitacion" value="" required autocomplete="name" maxlength="11" autofocus>
                             </div>
                             </div>
                             <div class="row mb-3">
