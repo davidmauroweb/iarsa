@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('nombre', length: 50);
             $table->string('licitacion', length: 11);
             $table->foreignId('comitente');
+            $table->date('inicio');
+            $table->unsignedTinyInteger('plazo');
             $table->boolean('activo')->default(1);
             $table->timestamps();
         });

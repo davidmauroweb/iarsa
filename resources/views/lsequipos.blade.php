@@ -17,21 +17,30 @@
                             <th>Modelo</th>
                             <th>Patente</th>
                             <th>Potencia</th>
-                            <th>Control</th>
+                            <th>Resto</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($equipos as $u)
                         <tr  @if($u->activo==0) class="table-warning" @endif >
-                            @php $resto = $u->max-$u->control @endphp
+                            @php $resto = $u->max-$u->control;
+                            $por = $resto/$u->max @endphp
                             <td>{{$u->codigo}}</td>
                             <td>{{$u->tipo}}</td>
                             <td>{{$u->marca}}</td>
                             <td>{{$u->modelo}}</td>
                             <td>{{$u->patente}}</td>
                             <td>{{$u->potencia}}</td>
-                            <td>{{$resto}}</td>
+                            <td>{{$resto}}
+                            @if($por < 0.15)
+                            <i class="bi bi-exclamation-triangle-fill text-danger"></i>
+                            @elseif($por < 0.50)
+                            <i class="bi bi-exclamation-circle text-warning"></i>
+                            @else
+                            <i class="bi bi-check-circle text-success"></i>
+                            @endif
+                            </td>
                             <td> <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#edit{{$u->id}}"><i class="bi bi-pencil-square"></i></button>
                                         <!-- ModalEdit -->
                                         <div class="modal fade" id="edit{{$u->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

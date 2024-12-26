@@ -115,6 +115,9 @@
                             <div class="col-md-6">
                             <select id="rol" class="form-control" name="rol">
                                 <option value="opr" selected>Operario</option>
+                                <option value="mnt">Mantenimiento</option>
+                                <option value="obr">Jefe de Obra</option>
+                                <option value="cnt">Oficina Central</option>
                                 <option value="adm">Administrador</option>
                             </select>
                             </div>

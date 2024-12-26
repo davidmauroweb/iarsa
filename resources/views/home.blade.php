@@ -17,6 +17,8 @@
                     <li>Usuarios</li>
                     <li>Comitentes</li>
                     <li>Equipamiento</li>
+                    <li>Obras</li>
+                    <li>Item por Obra</li>
                 </div>
             </div>
         </div>

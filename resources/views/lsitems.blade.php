@@ -11,16 +11,18 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th></th>
+                            <th>#</th>
                             <th>Nombre</th>
+                            <th>Cantidad</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($items as $u)
                         <tr  @if($u->activo==0) class="table-warning" @endif >
-                            <td></td>
-                            <td @if($u->activo==0) class="text-secondary"><i class="bi bi-pencil-fill"> @else ><i class="bi bi-pencil-fill text-success"> @endif</i> {{$u->item}}</td>
+                            <td>{{$u->numero}}</td>
+                            <td>{{$u->item}}</td>
+                            <td>{{$u->cantidad}} {{$u->unidad}}</td>
                             <td>
  				            <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#edit{{$u->id}}"><i class="bi bi-pencil-square"></i></button>
                                         <!-- ModalEdit -->
@@ -80,15 +82,19 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                            <div class="row mb-3">
-                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Items') }}</label>
-                            <div class="col-md-6">
-                            <textarea class="form-control" class="form-control" id="name" name="nombre" value="" requiredrows="10"></textarea>
+                            <div class="row">
+                            <label for="name" class="col-md-2 col-form-label text-md-end">{{ __('Items*') }}</label>
+                            <div class="col-md-10">
+                            <textarea class="form-control" class="form-control" id="name" name="nombre" value=""></textarea>
                             </div>
                             </div>
                             </div>
                             <div class="modal-footer">
+
+                                <div class="col-md-8 text-secondary">* #,Nombre,unidad,cantidad <br></div>
+                                <div class="col-md-2">
                                 <button type="submit" class="btn btn-success btn-sm">Agregar</button>
+                                </div>
                             </div>
                         </form>
                         </div>

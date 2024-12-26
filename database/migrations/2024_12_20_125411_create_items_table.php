@@ -15,7 +15,10 @@ return new class extends Migration
             $table->id();
             $table->boolean('activo')->default(1);
             $table->foreignId('obra')->nullable('false');
-            $table->string('item', length:50)->nullable('false');
+            $table->unsignedTinyInteger('numero');
+            $table->string('item', length:100)->nullable('false');
+            $table->string('unidad',2);
+            $table->unsignedSmallInteger('cantidad');
             $table->timestamps();
         });
     }

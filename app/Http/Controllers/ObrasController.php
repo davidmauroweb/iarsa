@@ -43,6 +43,8 @@ class ObrasController extends Controller
         $nuevo->nombre = $request->nombre;
         $nuevo->licitacion = $request->licitacion;
         $nuevo->comitente = $request->comitente;
+        $nuevo->plazo = $request->plazo;
+        $nuevo->inicio = $request->inicio;
         $nuevo->save();
         return redirect()->route('lsobras')->with('mensajeOk',$request->nombre.' Se cargó correctamente.');
     }

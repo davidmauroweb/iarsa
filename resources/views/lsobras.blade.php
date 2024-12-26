@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card">
                 <div class="card-header">{{ __('Lista de Obras') }}
                 </div>
@@ -15,6 +15,8 @@
                             <th>Nombre</th>
                             <th>Licitación</th>
                             <th>Comitente</th>
+                            <th>Inicio</th>
+                            <th>Plazo</th>
                             <th>Items</th>
                             <th>Editar</th>
                         </tr>
@@ -26,6 +28,8 @@
                             <td>{{$u->nombre}}</td>
                             <td>{{$u->licitacion}}</td>
                             <td>{{$u->ncomi}}</td>
+                            <td>{{date('d/m/y', strtotime($u->inicio))}}</td>
+                            <td>{{$u->plazo}}</td>
                             <td>
                                     <a href="{{ route('lsitems',$u->id) }}">
                                     <button class="btn btn-sm btn-secondary"><i class="bi bi-list-check"></i></button>
@@ -55,6 +59,21 @@
                                                 <label for="licitacion" class="col-md-4 col-form-label text-md-end">{{ __('Licitación') }}</label>
                                                 <div class="col-md-6">
                                                     <input id="licitacion" type="text" class="form-control" name="licitacion" value="{{$u->licitacion}}" required autocomplete="name" maxlength="11" autofocus>
+                                                </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                <label for="licitacion" class="col-md-4 col-form-label text-md-end">{{ __('Inicio') }}</label>
+                                                <div class="col-md-6">
+                                                    <input id="licitacion" type="date" class="form-control" name="inicio" value='{{$u->inicio}}' required autocomplete="inicio" autofocus>
+                                                </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                <label for="licitacion" class="col-md-4 col-form-label text-md-end">{{ __('Pazo') }}</label>
+                                                <div class="col-md-3">
+                                                    <input id="licitacion" type="number" class="form-control" name="plazo" value="{{$u->plazo}}" required autocomplete="name" maxlength="3">
+                                                </div>
+                                                <div class="col-md-3 mt-2 pl-4">
+                                                    Meses
                                                 </div>
                                                 </div>
                                                 <div class="row mb-3">
@@ -97,7 +116,7 @@
                         <form method="POST" action="{{ route('nobras') }}">
                         @csrf
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Agregar Comitente</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Agregar Obra</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
@@ -111,6 +130,21 @@
                             <label for="licitacion" class="col-md-4 col-form-label text-md-end">{{ __('Licitación') }}</label>
                             <div class="col-md-6">
                                 <input id="licitacion" type="text" class="form-control" name="licitacion" value="" required autocomplete="name" maxlength="11" autofocus>
+                            </div>
+                            </div>
+                            <div class="row mb-3">
+                            <label for="licitacion" class="col-md-4 col-form-label text-md-end">{{ __('Inicio') }}</label>
+                            <div class="col-md-6">
+                                <input id="licitacion" type="date" class="form-control" name="inicio" value="" required autocomplete="inicio" autofocus>
+                            </div>
+                            </div>
+                            <div class="row mb-3">
+                            <label for="licitacion" class="col-md-4 col-form-label text-md-end">{{ __('Pazo') }}</label>
+                            <div class="col-md-3">
+                                <input id="licitacion" type="number" class="form-control" name="plazo" value="" required autocomplete="name" maxlength="3">
+                            </div>
+                            <div class="col-md-3 mt-2 pl-4">
+                                Meses
                             </div>
                             </div>
                             <div class="row mb-3">

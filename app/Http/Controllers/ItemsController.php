@@ -39,8 +39,12 @@ class ItemsController extends Controller
 */
         $todos = explode(PHP_EOL,$request->nombre);
         foreach($todos as $item){
+            $vector = explode(',',$item);
             $nuevo = new items();
-            $nuevo->item=$item;
+            $nuevo->numero = $vector[0];
+            $nuevo->item = $vector[1];
+            $nuevo->unidad = $vector[2];
+            $nuevo->cantidad = $vector[3];
             $nuevo->obra=$request->obra;
             $nuevo->save();
         }
