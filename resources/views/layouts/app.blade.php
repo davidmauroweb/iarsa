@@ -48,13 +48,7 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
                                 </li>
                             @endif
                         @else
@@ -74,16 +68,6 @@
                                     <a class="dropdown-item" href="{{ route('lsequipos') }}">
                                     <i class="bi bi-truck-front-fill"></i> Equipos
                                     </a>
-                                    <a class="dropdown-item" href="{{ route('lsobras') }}">
-                                    <i class="bi bi-cone-striped"></i> Obras
-                                    </a>
-                                    @endif
-                                    @if (Auth::user()->rol == "mnt")
-                                    <a class="dropdown-item" href="{{ route('lsequipos') }}">
-                                    <i class="bi bi-truck-front-fill"></i> Equipos
-                                    </a>
-                                    @endif
-                                    @if (Auth::user()->rol == "obr")
                                     <a class="dropdown-item" href="{{ route('lsobras') }}">
                                     <i class="bi bi-cone-striped"></i> Obras
                                     </a>

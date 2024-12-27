@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{HomeController,Controller,EquiposController,ObrasController,ItemsController};
+use App\Http\Controllers\{HomeController,Controller,EquiposController,ObrasController,ItemsController,PdiarioController};
 
 Route::get('/', function () {
     return view('auth/login');
@@ -39,3 +39,9 @@ Route::get('/items/{obra}', [ItemsController::class, 'index'])->name('lsitems');
 Route::post('/nitems', [ItemsController::class, 'nuevo'])->name('nitems');
 Route::post('/eitems', [ItemsController::class, 'edit'])->name('eitems');
 });
+
+Route::group(['middleware' => 'opr'], function () {
+    Route::get('/homeopr', [PdiarioController::class, 'index'])->name('homeopr');
+    Route::post('/fpdiario', [PdiarioController::class, 'show'])->name('fpdiario');
+    Route::post('/npdiario', [PdiarioController::class, 'nuevo'])->name('npdiario');
+    });

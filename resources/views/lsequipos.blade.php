@@ -32,7 +32,11 @@
                             <td>{{$u->modelo}}</td>
                             <td>{{$u->patente}}</td>
                             <td>{{$u->potencia}}</td>
-                            <td>{{$resto}}
+                            <td 
+                            @if ($resto<0)
+                            class="text-danger"
+                            @endif
+                            >{{$resto}}
                             @if($por < 0.15)
                             <i class="bi bi-exclamation-triangle-fill text-danger"></i>
                             @elseif($por < 0.50)

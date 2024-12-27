@@ -39,7 +39,7 @@ class ItemsController extends Controller
 */
         $todos = explode(PHP_EOL,$request->nombre);
         foreach($todos as $item){
-            $vector = explode(',',$item);
+            $vector = explode('-',$item);
             $nuevo = new items();
             $nuevo->numero = $vector[0];
             $nuevo->item = $vector[1];

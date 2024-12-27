@@ -133,9 +133,9 @@
                             </div>
                             </div>
                             <div class="row mb-3">
-                            <label for="licitacion" class="col-md-4 col-form-label text-md-end">{{ __('Inicio') }}</label>
+                            <label for="inicio" class="col-md-4 col-form-label text-md-end">{{ __('Inicio') }}</label>
                             <div class="col-md-6">
-                                <input id="licitacion" type="date" class="form-control" name="inicio" value="" required autocomplete="inicio" autofocus>
+                                <input id="inicio" type="date" class="form-control" name="inicio" value="" required autocomplete="inicio" autofocus>
                             </div>
                             </div>
                             <div class="row mb-3">

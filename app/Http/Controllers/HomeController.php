@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        switch (Auth::user()->rol){
+            case('mnt'):
+                return redirect()->route('lsequipos');
+            case('obr'):
+                return redirect()->route('lsobra');
+            case('cnt'):
+                return redirect()->route('lsus');
+            case('opr'):
+                return redirect()->route('homeopr');
+            default:
+                return view('home');
+        }
+        
     }
 }
