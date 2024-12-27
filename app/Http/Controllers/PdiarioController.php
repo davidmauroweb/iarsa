@@ -17,6 +17,7 @@ class PdiarioController extends Controller
         ->select('fecha','items.item','equipos.codigo')
         ->join('items','pdiarios.item','items.id')
         ->join('equipos','pdiarios.equipo','equipos.id')
+        ->orderByDesc('pdiarios.id')
         ->take(5)->get();
         $obras=obras::all()->where('activo','=',1);
         return view('homeoperario', ['obras'=>$obras,'partes'=>$partes]);

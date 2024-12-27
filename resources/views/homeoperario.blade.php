@@ -11,7 +11,6 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th></th>
                             <th>Nombre</th>
                             <th>Inicio</th>
                             <th></th>
@@ -20,7 +19,6 @@
                     <tbody>
                         @foreach ($obras as $u)
                         <tr>
-                            <td>{{$u->id}}</td>
                             <td>{{$u->nombre}}</td>
                             <td>{{date('d/m/y', strtotime($u->inicio))}}</td>
                             <td>
