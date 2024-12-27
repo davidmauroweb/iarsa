@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class ComitentesController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('adm');
-    }
+//    public function __construct()
+//   {
+//        $this->middleware('adm');
+//    }
     /**
      * Display a listing of the resource.
      */

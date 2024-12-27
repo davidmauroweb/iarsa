@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class AdminMiddleware
+class mantenimiento
 {
     /**
      * Handle an incoming request.
@@ -15,12 +15,11 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (auth()->user()->rol=="adm")
+        if (auth()->user()->rol=="adm" || auth()->user()->rol=="mnt")
         {
         return $next($request);
         };
 
-        return redirect()->route('home')->with('mensajeNo','Acceso solo a Administrador.');
-    //    return $next($request);
+        return redirect()->route('home')->with('mensajeNo','Acceso para Mantenimiento.');
     }
 }

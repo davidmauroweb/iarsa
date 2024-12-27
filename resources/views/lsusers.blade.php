@@ -79,7 +79,7 @@
                                     @method('delete')
                                     @if($u->activo==1)
                                         <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('¿Desea Desactivar a  {{$u->name}}?')" title="Desactivar"
-                                        @if ($u->rol=='adm')
+                                        @if ($u->rol=='adm' || $u->id==Auth::user()->id)
                                             disabled
                                         @endif><i class="bi bi-person-fill-x"></i></button>
                                     @else

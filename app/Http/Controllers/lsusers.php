@@ -12,10 +12,10 @@ class lsusers extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-      $this->middleware('adm');
-    }
+//    public function __construct()
+//    {
+//      $this->middleware('adm');
+//    }
 
     /**
      * Show the application dashboard.

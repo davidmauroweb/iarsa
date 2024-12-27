@@ -8,6 +8,8 @@ Route::get('/', function () {
 });
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(['middleware' => 'cnt'], function () {
 //USUARIOS
 Route::get('/lsusers', [App\Http\Controllers\lsusers::class, 'lista'])->name('lsus');
 Route::post('/nus', [App\Http\Controllers\Auth\RegisterController::class, 'nuevo'])->name('nus');
@@ -17,10 +19,17 @@ Route::put('/du/{u}', [App\Http\Controllers\Auth\RegisterController::class, 'mus
 Route::get('/comitentes', [App\Http\Controllers\ComitentesController::class, 'index'])->name('lscomitentes');
 Route::post('/ncom', [App\Http\Controllers\ComitentesController::class, 'nuevo'])->name('ncom');
 Route::post('/ecom', [App\Http\Controllers\ComitentesController::class, 'edit'])->name('ecom');
+});
+
 //EQUIPAMIENTO
+Route::group(['middleware' => 'mnt'], function () {
 Route::get('/equipos', [EquiposController::class, 'index'])->name('lsequipos');
 Route::post('/nequipos', [EquiposController::class, 'nuevo'])->name('nequipos');
 Route::post('/eequipos', [EquiposController::class, 'edit'])->name('eequipos');
+});
+
+// middleware Jefe de Obra incluye Oficina Central
+Route::group(['middleware' => 'obr'], function () {
 //OBRAS
 Route::get('/obras', [ObrasController::class, 'index'])->name('lsobras');
 Route::post('/nobras', [ObrasController::class, 'nuevo'])->name('nobras');
@@ -29,3 +38,4 @@ Route::post('/eobras', [ObrasController::class, 'edit'])->name('eobras');
 Route::get('/items/{obra}', [ItemsController::class, 'index'])->name('lsitems');
 Route::post('/nitems', [ItemsController::class, 'nuevo'])->name('nitems');
 Route::post('/eitems', [ItemsController::class, 'edit'])->name('eitems');
+});

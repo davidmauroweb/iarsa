@@ -78,6 +78,27 @@
                                     <i class="bi bi-cone-striped"></i> Obras
                                     </a>
                                     @endif
+                                    @if (Auth::user()->rol == "mnt")
+                                    <a class="dropdown-item" href="{{ route('lsequipos') }}">
+                                    <i class="bi bi-truck-front-fill"></i> Equipos
+                                    </a>
+                                    @endif
+                                    @if (Auth::user()->rol == "obr")
+                                    <a class="dropdown-item" href="{{ route('lsobras') }}">
+                                    <i class="bi bi-cone-striped"></i> Obras
+                                    </a>
+                                    @endif
+                                    @if (Auth::user()->rol == "cnt")
+                                    <a class="dropdown-item" href="{{ route('lsus') }}">
+                                    <i class="bi bi-people-fill"></i> Usuarios
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('lscomitentes') }}">
+                                    <i class="bi bi-hospital-fill"></i> Comitentes
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('lsobras') }}">
+                                    <i class="bi bi-cone-striped"></i> Obras
+                                    </a>
+                                    @endif
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
