@@ -26,6 +26,7 @@ Route::group(['middleware' => 'mnt'], function () {
 Route::get('/equipos', [EquiposController::class, 'index'])->name('lsequipos');
 Route::post('/nequipos', [EquiposController::class, 'nuevo'])->name('nequipos');
 Route::post('/eequipos', [EquiposController::class, 'edit'])->name('eequipos');
+Route::post('/lspdmnt', [PdiarioController::class, 'showmnt'])->name('lspdmnt');
 });
 
 // middleware Jefe de Obra incluye Oficina Central

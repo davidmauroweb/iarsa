@@ -72,6 +72,11 @@
                                     <i class="bi bi-cone-striped"></i> Obras
                                     </a>
                                     @endif
+                                    @if (Auth::user()->rol == "mnt")
+                                    <a class="dropdown-item" href="{{ route('lsequipos') }}">
+                                    <i class="bi bi-truck-front-fill"></i> Equipos
+                                    </a>
+                                    @endif
                                     @if (Auth::user()->rol == "cnt")
                                     <a class="dropdown-item" href="{{ route('lsus') }}">
                                     <i class="bi bi-people-fill"></i> Usuarios

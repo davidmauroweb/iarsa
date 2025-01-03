@@ -18,6 +18,7 @@
                             <th>Patente</th>
                             <th>Potencia</th>
                             <th>Resto</th>
+                            <th>Partes</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -44,6 +45,13 @@
                             @else
                             <i class="bi bi-check-circle text-success"></i>
                             @endif
+                            </td>
+                            <td><form method="POST" action="{{route('lspdmnt')}}">
+                                @csrf
+                                <input type="hidden" name="b" value="e">
+                                <input type="hidden" name="id" value="{{$u->id}}">
+                                <button type="submit" class="btn btn-secondary btn-sm"><i class="bi bi-list-columns"></i></button>
+                            </form>
                             </td>
                             <td> <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#edit{{$u->id}}"><i class="bi bi-pencil-square"></i></button>
                                         <!-- ModalEdit -->
@@ -211,6 +219,30 @@
                 </div><!-- CardBody -->
             </div><!-- Card -->
         </div><!-- colmd8 -->
+        <div class="row justify-content-center my-3">
+            <form class="form-inline" method="POST" action="{{route('lspdmnt')}}">
+                @csrf
+                <input type="hidden" name="b" value="o">
+                <table>
+                    <tr>
+                        <td>
+                            Listar partes de la obra: 
+                        </td>
+                        <td>
+                        <select class="form-select" name="id">
+                        <option selected>Seleccionar Obra</option>
+                        @foreach($obras as $o)
+                        <option value="{{$o->id}}">{{$o->nombre}}</option>
+                        @endforeach
+                        </select>
+                        </td>
+                        <td>
+                        <button type="submit" class="btn btn-secondary btn-sm  mx-sm-3"><i class="bi bi-search"></i></button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
     </div><!-- justifi -->
 </div><!-- container -->
 @endsection

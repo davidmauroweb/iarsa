@@ -66,6 +66,36 @@ class PdiarioController extends Controller
         return view('partediario', ['obra'=>$obra, 'items'=>$items, 'equipos'=>$equipos]);
     }
 
+    public function showmnt(Request $request)
+    // toma $request['b']={'o','e'} segun el tipo de filtro o=obra, e=equipo
+    {
+        if($request->b == 'e'){
+        $partes = DB::table('pdiarios')
+            ->select('pdiarios.fecha','pdiarios.horas','pdiarios.combustible','pdiarios.aceite','pdiarios.lubricante','pdiarios.obs','equipos.codigo','equipos.max','equipos.control','obras.nombre','items.item','users.name')
+            ->join('equipos','pdiarios.equipo','equipos.id')
+            ->join('obras','pdiarios.obra','obras.id')
+            ->join('users','pdiarios.usuario','users.id')
+            ->join('items','pdiarios.item','items.id')
+            ->where('pdiarios.equipo','=',$request->id)
+            ->paginate(15);
+        $equipo = DB::table('equipos')->where('id','=',$request->id)->first();
+        $titulo = " Equipo Cod.:<b>".$equipo->codigo."</b> Marca:<b>".$equipo->marca."</b> Patente:<b>".$equipo->patente."</b>";
+        }else{
+            $partes = DB::table('pdiarios')
+            ->select('pdiarios.fecha','pdiarios.horas','pdiarios.combustible','pdiarios.aceite','pdiarios.lubricante','pdiarios.obs','equipos.codigo','equipos.max','equipos.control','obras.nombre','items.item','users.name')
+            ->join('equipos','pdiarios.equipo','equipos.id')
+            ->join('obras','pdiarios.obra','obras.id')
+            ->join('users','pdiarios.usuario','users.id')
+            ->join('items','pdiarios.item','items.id')
+            ->where('pdiarios.obra','=',$request->id)
+            ->paginate(15);
+        $obra = DB::table('obras')->where('id','=',$request->id)->first();
+        $titulo = " Obra:<b>".$obra->nombre."</b> Licitación:<b>".$obra->licitacion."</b> Inicio:<b>".$obra->inicio."</b> Plazo:<b>".$obra->plazo." meses</b>";
+        }
+        return view('lspdmnt',['partes'=>$partes, 'titulo'=>$titulo]);
+        
+    }
+
     /**
      * Show the form for editing the specified resource.
      */

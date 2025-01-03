@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\equipos;
+use App\Models\{equipos};
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -17,8 +17,9 @@ class EquiposController extends Controller
      */
     public function index()
     {
+        $obras = DB::table('obras')->select('nombre','id')->orderBy('nombre')->get();
         $equipos = DB::table('equipos')->simplePaginate(10);
-        return view('lsequipos', ['equipos'=>$equipos]);
+        return view('lsequipos', ['equipos'=>$equipos, 'obras'=>$obras]);
     }
 
     /**
