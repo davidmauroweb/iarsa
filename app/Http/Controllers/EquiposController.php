@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\{equipos};
+use App\Models\equipos;
+use App\Exports\eqxls;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Maatwebsite\Excel\Facades\Excel;
 
 class EquiposController extends Controller
 {
@@ -55,14 +57,6 @@ class EquiposController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     */
-    public function show(equipos $equipos)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      */
     public function edit(Request $request)
@@ -86,20 +80,11 @@ class EquiposController extends Controller
         $param = "page=".$request->pg;
         return redirect()->route('lsequipos',$param)->with('mensajeOk',$nuevo->codigo.' Se modificó correctamente.');
     }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, equipos $equipos)
+    
+    public function eqxls()
     {
-        //
+        $filename = "Equipos".date('Y-m-d');
+        return Excel::download(new eqxls,$filename.'.xlsx');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(equipos $equipos)
-    {
-        //
-    }
 }

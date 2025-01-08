@@ -27,6 +27,8 @@ Route::get('/equipos', [EquiposController::class, 'index'])->name('lsequipos');
 Route::post('/nequipos', [EquiposController::class, 'nuevo'])->name('nequipos');
 Route::post('/eequipos', [EquiposController::class, 'edit'])->name('eequipos');
 Route::post('/lspdmnt', [PdiarioController::class, 'showmnt'])->name('lspdmnt');
+//xls
+Route::get('/eqxls', [EquiposController::class, 'eqxls'])->name('eqxls');
 });
 
 // middleware Jefe de Obra incluye Oficina Central

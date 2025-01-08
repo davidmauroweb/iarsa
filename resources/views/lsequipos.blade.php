@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-11">
             <div class="card">
-                <div class="card-header">{{ __('Lista de Equipos')}}
+                <div class="card-header">{{ __('Lista de Equipos')}} <a href="{{route('eqxls')}}"><i class="bi bi-filetype-xlsx text-success"></i></a>
                 </div>
                 <div class="card-body">
                 <table class="table table-striped">
