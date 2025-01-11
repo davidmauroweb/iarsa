@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\{pdiario,equipos,obras};
+use App\Exports\exportpd;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Maatwebsite\Excel\Facades\Excel;
 
 class PdiarioController extends Controller
 {
@@ -92,16 +94,25 @@ class PdiarioController extends Controller
         $obra = DB::table('obras')->where('id','=',$request->id)->first();
         $titulo = " Obra:<b>".$obra->nombre."</b> Licitación:<b>".$obra->licitacion."</b> Inicio:<b>".$obra->inicio."</b> Plazo:<b>".$obra->plazo." meses</b>";
         }
-        return view('lspdmnt',['partes'=>$partes, 'titulo'=>$titulo]);
+        return view('lspdmnt',['partes'=>$partes, 'titulo'=>$titulo, 'acc'=>$request->b,'idex'=>$request->id]);
         
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(pdiario $pdiario)
+    public function exportpd($pd)
     {
-        //
+        echo $pd;
+        list($acc,$id)=explode("|",$pd);
+        if ($acc=="e"){
+            $equipo = DB::table('equipos')->select('codigo')->where('id','=',$id)->first();
+            $fn=$equipo->codigo."-".date('Y-m-d');
+        }else{
+            $obra = DB::table('obras')->select('nombre')->where('id','=',$id)->first();
+            $fn=$obra->nombre."-".date('Y-m-d');
+        }
+        return Excel::download(new exportpd($pd),$fn.'.xlsx');
     }
 
     /**

@@ -27,6 +27,7 @@ Route::get('/equipos', [EquiposController::class, 'index'])->name('lsequipos');
 Route::post('/nequipos', [EquiposController::class, 'nuevo'])->name('nequipos');
 Route::post('/eequipos', [EquiposController::class, 'edit'])->name('eequipos');
 Route::post('/lspdmnt', [PdiarioController::class, 'showmnt'])->name('lspdmnt');
+Route::get('/exportpd/{pd}', [App\Http\Controllers\PdiarioController::class, 'exportpd'])->name('exportpd');
 //xls
 Route::get('/eqxls', [EquiposController::class, 'eqxls'])->name('eqxls');
 });

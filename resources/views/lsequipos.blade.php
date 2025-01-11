@@ -17,7 +17,7 @@
                             <th>Modelo</th>
                             <th>Patente</th>
                             <th>Potencia</th>
-                            <th>Resto</th>
+                            <th>Sevice</th>
                             <th>Partes</th>
                             <th></th>
                         </tr>
@@ -229,8 +229,8 @@
                             Listar partes de la obra: 
                         </td>
                         <td>
-                        <select class="form-select" name="id">
-                        <option selected>Seleccionar Obra</option>
+                        <select name="id" class='form-control'  required="required">
+                        <option selected disabled></option>
                         @foreach($obras as $o)
                         <option value="{{$o->id}}">{{$o->nombre}}</option>
                         @endforeach

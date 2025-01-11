@@ -21,7 +21,7 @@
             <td>{{$u->modelo}}</td>
             <td>{{$u->patente}}</td>
             <td>{{$u->potencia}}</td>
-            <td>{{$resto}}</td>
+            <td></td>
         </tr>
         @endforeach
     </tbody>

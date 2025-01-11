@@ -5,7 +5,8 @@
     <div class="row justify-content-center">
         <div class="col">
             <div class="card">
-                <div class="card-header">Lista de Partes de : @php echo $titulo @endphp</div>
+                @php $param=$acc."|".$idex @endphp
+                <div class="card-header">Lista de Partes de : @php echo $titulo @endphp <a href="{{route('exportpd',$param)}}"><i class="bi bi-filetype-xlsx text-success"></i></a></div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -22,7 +23,7 @@
                             <th>Equipo</th>
                             <th>Item</th>
                             <th>Horas</th>
-                            <th>Resto</th>
+                            <th>Service</th>
                             <th>Comb.</th>
                             <th>Aceite</th>
                             <th>Lub</th>
