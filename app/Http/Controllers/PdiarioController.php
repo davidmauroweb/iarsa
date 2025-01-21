@@ -19,7 +19,7 @@ class PdiarioController extends Controller
         ->select('fecha','items.item','equipos.codigo')
         ->join('items','pdiarios.item','items.id')
         ->join('equipos','pdiarios.equipo','equipos.id')
-        ->orderByDesc('pdiarios.id')
+        ->orderByDesc('pdiarios.fecha')
         ->take(5)->get();
         $obras=obras::all()->where('activo','=',1);
         return view('homeoperario', ['obras'=>$obras,'partes'=>$partes]);
@@ -52,6 +52,7 @@ class PdiarioController extends Controller
         $Actual = equipos::find($request->equipo_id);
         $ncontrol = $Actual->control + $request->horas;
         $Actual->control = $ncontrol;
+        $nuevo->hist = $ncontrol;
         $nuevo->save();
         $Actual->save();
         return redirect()->route('homeopr')->with('mensajeOk','Parte Cargado');
@@ -73,23 +74,25 @@ class PdiarioController extends Controller
     {
         if($request->b == 'e'){
         $partes = DB::table('pdiarios')
-            ->select('pdiarios.fecha','pdiarios.horas','pdiarios.combustible','pdiarios.aceite','pdiarios.lubricante','pdiarios.obs','equipos.codigo','equipos.max','equipos.control','obras.nombre','items.item','users.name')
+            ->select('pdiarios.fecha','pdiarios.horas','pdiarios.hist','pdiarios.combustible','pdiarios.aceite','pdiarios.lubricante','pdiarios.obs','equipos.codigo','equipos.max','equipos.control','obras.nombre','items.item','users.name')
             ->join('equipos','pdiarios.equipo','equipos.id')
             ->join('obras','pdiarios.obra','obras.id')
             ->join('users','pdiarios.usuario','users.id')
             ->join('items','pdiarios.item','items.id')
             ->where('pdiarios.equipo','=',$request->id)
+            ->orderByDesc('pdiarios.fecha')
             ->paginate(15);
         $equipo = DB::table('equipos')->where('id','=',$request->id)->first();
         $titulo = " Equipo Cod.:<b>".$equipo->codigo."</b> Marca:<b>".$equipo->marca."</b> Patente:<b>".$equipo->patente."</b>";
         }else{
             $partes = DB::table('pdiarios')
-            ->select('pdiarios.fecha','pdiarios.horas','pdiarios.combustible','pdiarios.aceite','pdiarios.lubricante','pdiarios.obs','equipos.codigo','equipos.max','equipos.control','obras.nombre','items.item','users.name')
+            ->select('pdiarios.fecha','pdiarios.horas','pdiarios.hist','pdiarios.combustible','pdiarios.aceite','pdiarios.lubricante','pdiarios.obs','equipos.codigo','equipos.max','equipos.control','obras.nombre','items.item','users.name')
             ->join('equipos','pdiarios.equipo','equipos.id')
             ->join('obras','pdiarios.obra','obras.id')
             ->join('users','pdiarios.usuario','users.id')
             ->join('items','pdiarios.item','items.id')
             ->where('pdiarios.obra','=',$request->id)
+            ->orderByDesc('pdiarios.fecha')
             ->paginate(15);
         $obra = DB::table('obras')->where('id','=',$request->id)->first();
         $titulo = " Obra:<b>".$obra->nombre."</b> Licitación:<b>".$obra->licitacion."</b> Inicio:<b>".$obra->inicio."</b> Plazo:<b>".$obra->plazo." meses</b>";
@@ -103,7 +106,6 @@ class PdiarioController extends Controller
      */
     public function exportpd($pd)
     {
-        echo $pd;
         list($acc,$id)=explode("|",$pd);
         if ($acc=="e"){
             $equipo = DB::table('equipos')->select('codigo')->where('id','=',$id)->first();

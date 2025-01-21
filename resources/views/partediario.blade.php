@@ -20,7 +20,7 @@
                     <div class="row mb-3">
                             <label for="fe" class="col-md-4 col-form-label text-md-end">{{ __('Fecha') }}</label>
                             <div class="col-md-6">
-                                <input id="fe" type="date" class="form-control" name="fecha" required>
+                                <input id="fe" type="date" class="form-control" name="fecha" min="2025-01-01" max="{{ date('Y-m-d') }}" required>
                             </div>
                     </div><!-- ROW -->
                     <div class="row mb-3">

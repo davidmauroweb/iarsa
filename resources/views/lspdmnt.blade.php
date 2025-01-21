@@ -23,6 +23,7 @@
                             <th>Equipo</th>
                             <th>Item</th>
                             <th>Horas</th>
+                            <th>Fin</th>
                             <th>Service</th>
                             <th>Comb.</th>
                             <th>Aceite</th>
@@ -39,6 +40,7 @@
                             <td>{{$p->codigo}}</td>
                             <td>{{$p->item}}</td>
                             <td>{{$p->horas}}</td>
+                            <td>{{$p->hist}}</td>
                             <td>@php echo $p->max - $p->control @endphp</td>
                             <td>{{$p->combustible}}</td>
                             <td>{{$p->aceite}}</td>
