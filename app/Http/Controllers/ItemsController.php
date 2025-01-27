@@ -17,7 +17,7 @@ class ItemsController extends Controller
      */
     public function index(obras $obra)
     {
-        $items = DB::table('items')->select('items.*')->where('obra','=',$obra->id)->orderBy('item')->paginate(10);
+        $items = DB::table('items')->select('items.*')->where('obra','=',$obra->id)->orderBy('numero')->paginate(10);
         return view('lsitems', ['items'=>$items, 'obra'=>$obra]);
     }
 
@@ -39,21 +39,16 @@ class ItemsController extends Controller
 */
         $todos = explode(PHP_EOL,$request->nombre);
         foreach($todos as $item){
-            $vector = explode('-',$item);
+            $vector = explode('_',$item);
             $nuevo = new items();
+            $nuevo->obra=$request->obra;
             $nuevo->numero = $vector[0];
             $nuevo->item = $vector[1];
             $nuevo->unidad = $vector[2];
             $nuevo->cantidad = $vector[3];
-            $nuevo->obra=$request->obra;
             $nuevo->save();
         }
         return redirect()->route('lsitems',$request->obra)->with('mensajeOk',' Items agregados.');
-        /*$nuevo = new items();
-        $nuevo->item = $request->nombre;
-        $nuevo->obra = $request->obra;
-        $nuevo->save();
-        return redirect()->route('lsitems',$request->obra)->with('mensajeOk',$request->nombre.' Se cargó correctamente.');*/
     }
 
     /**

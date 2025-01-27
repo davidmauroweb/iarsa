@@ -52,7 +52,7 @@ class PdiarioController extends Controller
         $Actual = equipos::find($request->equipo_id);
         $ncontrol = $Actual->control + $request->horas;
         $Actual->control = $ncontrol;
-        $nuevo->hist = $ncontrol;
+        $nuevo->hist = $Actual->max - $ncontrol;
         $nuevo->save();
         $Actual->save();
         return redirect()->route('homeopr')->with('mensajeOk','Parte Cargado');

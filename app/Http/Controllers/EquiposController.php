@@ -20,7 +20,7 @@ class EquiposController extends Controller
     public function index()
     {
         $obras = DB::table('obras')->select('nombre','id')->orderBy('nombre')->get();
-        $equipos = DB::table('equipos')->simplePaginate(10);
+        $equipos = DB::table('equipos')->paginate(10);
         return view('lsequipos', ['equipos'=>$equipos, 'obras'=>$obras]);
     }
 

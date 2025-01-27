@@ -138,6 +138,7 @@
                     </tbody>
                 </table>
                 </div>
+                <div class="mx-3"><ul class="pagination">{{ $equipos->links() }}</ul></div>
                 <div class="card-footer">
                 <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#mm">Agregar</button>
                 <!-- Modal -->

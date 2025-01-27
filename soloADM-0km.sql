@@ -352,7 +352,7 @@ UNLOCK TABLES;
 --
 
 /*!40000 ALTER TABLE `innodb_index_stats` DISABLE KEYS */;
-INSERT  IGNORE INTO `innodb_index_stats` VALUES ('iarsa','cache','PRIMARY','2024-12-27 11:31:14','n_diff_pfx01',0,1,'key'),('iarsa','cache','PRIMARY','2024-12-27 11:31:14','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','cache','PRIMARY','2024-12-27 11:31:14','size',1,NULL,'Number of pages in the index'),('iarsa','cache_locks','PRIMARY','2024-12-27 11:31:16','n_diff_pfx01',0,1,'key'),('iarsa','cache_locks','PRIMARY','2024-12-27 11:31:16','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','cache_locks','PRIMARY','2024-12-27 11:31:16','size',1,NULL,'Number of pages in the index'),('iarsa','comitentes','PRIMARY','2024-12-27 11:31:18','n_diff_pfx01',0,1,'id'),('iarsa','comitentes','PRIMARY','2024-12-27 11:31:18','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','comitentes','PRIMARY','2024-12-27 11:31:18','size',1,NULL,'Number of pages in the index'),('iarsa','equipos','PRIMARY','2024-12-27 11:31:20','n_diff_pfx01',0,1,'id'),('iarsa','equipos','PRIMARY','2024-12-27 11:31:20','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','equipos','PRIMARY','2024-12-27 11:31:20','size',1,NULL,'Number of pages in the index'),('iarsa','equipos','equipos_codigo_unique','2024-12-27 11:31:20','n_diff_pfx01',0,1,'codigo'),('iarsa','equipos','equipos_codigo_unique','2024-12-27 11:31:20','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','equipos','equipos_codigo_unique','2024-12-27 11:31:20','size',1,NULL,'Number of pages in the index'),('iarsa','failed_jobs','PRIMARY','2024-12-27 11:31:22','n_diff_pfx01',0,1,'id'),('iarsa','failed_jobs','PRIMARY','2024-12-27 11:31:22','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','failed_jobs','PRIMARY','2024-12-27 11:31:22','size',1,NULL,'Number of pages in the index'),('iarsa','failed_jobs','failed_jobs_uuid_unique','2024-12-27 11:31:22','n_diff_pfx01',0,1,'uuid'),('iarsa','failed_jobs','failed_jobs_uuid_unique','2024-12-27 11:31:22','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','failed_jobs','failed_jobs_uuid_unique','2024-12-27 11:31:22','size',1,NULL,'Number of pages in the index'),('iarsa','items','PRIMARY','2024-12-27 11:31:24','n_diff_pfx01',0,1,'id'),('iarsa','items','PRIMARY','2024-12-27 11:31:24','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','items','PRIMARY','2024-12-27 11:31:24','size',1,NULL,'Number of pages in the index'),('iarsa','job_batches','PRIMARY','2024-12-27 11:31:27','n_diff_pfx01',0,1,'id'),('iarsa','job_batches','PRIMARY','2024-12-27 11:31:27','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','job_batches','PRIMARY','2024-12-27 11:31:27','size',1,NULL,'Number of pages in the index'),('iarsa','jobs','PRIMARY','2024-12-27 11:31:30','n_diff_pfx01',0,1,'id'),('iarsa','jobs','PRIMARY','2024-12-27 11:31:30','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','jobs','PRIMARY','2024-12-27 11:31:30','size',1,NULL,'Number of pages in the index'),('iarsa','jobs','jobs_queue_index','2024-12-27 11:31:30','n_diff_pfx01',0,1,'queue'),('iarsa','jobs','jobs_queue_index','2024-12-27 11:31:30','n_diff_pfx02',0,1,'queue,id'),('iarsa','jobs','jobs_queue_index','2024-12-27 11:31:30','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','jobs','jobs_queue_index','2024-12-27 11:31:30','size',1,NULL,'Number of pages in the index'),('iarsa','migrations','PRIMARY','2024-12-27 11:31:33','n_diff_pfx01',0,1,'id'),('iarsa','migrations','PRIMARY','2024-12-27 11:31:33','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','migrations','PRIMARY','2024-12-27 11:31:33','size',1,NULL,'Number of pages in the index'),('iarsa','obras','PRIMARY','2024-12-27 11:31:37','n_diff_pfx01',0,1,'id'),('iarsa','obras','PRIMARY','2024-12-27 11:31:37','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','obras','PRIMARY','2024-12-27 11:31:37','size',1,NULL,'Number of pages in the index'),('iarsa','password_reset_tokens','PRIMARY','2024-12-27 11:31:39','n_diff_pfx01',0,1,'email'),('iarsa','password_reset_tokens','PRIMARY','2024-12-27 11:31:39','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','password_reset_tokens','PRIMARY','2024-12-27 11:31:39','size',1,NULL,'Number of pages in the index'),('iarsa','pdiarios','PRIMARY','2025-01-21 16:07:19','n_diff_pfx01',5,1,'id'),('iarsa','pdiarios','PRIMARY','2025-01-21 16:07:19','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','pdiarios','PRIMARY','2025-01-21 16:07:19','size',1,NULL,'Number of pages in the index'),('iarsa','sessions','PRIMARY','2024-12-27 11:31:43','n_diff_pfx01',0,1,'id'),('iarsa','sessions','PRIMARY','2024-12-27 11:31:43','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','sessions','PRIMARY','2024-12-27 11:31:43','size',1,NULL,'Number of pages in the index'),('iarsa','sessions','sessions_last_activity_index','2024-12-27 11:31:43','n_diff_pfx01',0,1,'last_activity'),('iarsa','sessions','sessions_last_activity_index','2024-12-27 11:31:43','n_diff_pfx02',0,1,'last_activity,id'),('iarsa','sessions','sessions_last_activity_index','2024-12-27 11:31:43','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','sessions','sessions_last_activity_index','2024-12-27 11:31:43','size',1,NULL,'Number of pages in the index'),('iarsa','sessions','sessions_user_id_index','2024-12-27 11:31:43','n_diff_pfx01',0,1,'user_id'),('iarsa','sessions','sessions_user_id_index','2024-12-27 11:31:43','n_diff_pfx02',0,1,'user_id,id'),('iarsa','sessions','sessions_user_id_index','2024-12-27 11:31:43','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','sessions','sessions_user_id_index','2024-12-27 11:31:43','size',1,NULL,'Number of pages in the index'),('iarsa','users','PRIMARY','2024-12-27 11:31:45','n_diff_pfx01',0,1,'id'),('iarsa','users','PRIMARY','2024-12-27 11:31:45','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','users','PRIMARY','2024-12-27 11:31:45','size',1,NULL,'Number of pages in the index'),('iarsa','users','users_email_unique','2024-12-27 11:31:45','n_diff_pfx01',0,1,'email'),('iarsa','users','users_email_unique','2024-12-27 11:31:45','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','users','users_email_unique','2024-12-27 11:31:45','size',1,NULL,'Number of pages in the index'),('mysql','component','PRIMARY','2024-12-27 11:30:42','n_diff_pfx01',0,1,'component_id'),('mysql','component','PRIMARY','2024-12-27 11:30:42','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('mysql','component','PRIMARY','2024-12-27 11:30:42','size',1,NULL,'Number of pages in the index'),('sys','sys_config','PRIMARY','2024-12-14 19:24:57','n_diff_pfx01',6,1,'variable'),('sys','sys_config','PRIMARY','2024-12-14 19:24:57','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('sys','sys_config','PRIMARY','2024-12-14 19:24:57','size',1,NULL,'Number of pages in the index');
+INSERT  IGNORE INTO `innodb_index_stats` VALUES ('iarsa','cache','PRIMARY','2025-01-24 18:00:48','n_diff_pfx01',0,1,'key'),('iarsa','cache','PRIMARY','2025-01-24 18:00:48','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','cache','PRIMARY','2025-01-24 18:00:48','size',1,NULL,'Number of pages in the index'),('iarsa','cache_locks','PRIMARY','2025-01-24 18:00:49','n_diff_pfx01',0,1,'key'),('iarsa','cache_locks','PRIMARY','2025-01-24 18:00:49','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','cache_locks','PRIMARY','2025-01-24 18:00:49','size',1,NULL,'Number of pages in the index'),('iarsa','comitentes','PRIMARY','2025-01-24 18:00:53','n_diff_pfx01',0,1,'id'),('iarsa','comitentes','PRIMARY','2025-01-24 18:00:53','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','comitentes','PRIMARY','2025-01-24 18:00:53','size',1,NULL,'Number of pages in the index'),('iarsa','equipos','PRIMARY','2025-01-24 18:00:54','n_diff_pfx01',0,1,'id'),('iarsa','equipos','PRIMARY','2025-01-24 18:00:54','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','equipos','PRIMARY','2025-01-24 18:00:54','size',1,NULL,'Number of pages in the index'),('iarsa','equipos','equipos_codigo_unique','2025-01-24 18:00:54','n_diff_pfx01',0,1,'codigo'),('iarsa','equipos','equipos_codigo_unique','2025-01-24 18:00:54','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','equipos','equipos_codigo_unique','2025-01-24 18:00:54','size',1,NULL,'Number of pages in the index'),('iarsa','failed_jobs','PRIMARY','2025-01-24 18:00:52','n_diff_pfx01',0,1,'id'),('iarsa','failed_jobs','PRIMARY','2025-01-24 18:00:52','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','failed_jobs','PRIMARY','2025-01-24 18:00:52','size',1,NULL,'Number of pages in the index'),('iarsa','failed_jobs','failed_jobs_uuid_unique','2025-01-24 18:00:52','n_diff_pfx01',0,1,'uuid'),('iarsa','failed_jobs','failed_jobs_uuid_unique','2025-01-24 18:00:52','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','failed_jobs','failed_jobs_uuid_unique','2025-01-24 18:00:52','size',1,NULL,'Number of pages in the index'),('iarsa','items','PRIMARY','2025-01-24 18:00:55','n_diff_pfx01',0,1,'id'),('iarsa','items','PRIMARY','2025-01-24 18:00:55','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','items','PRIMARY','2025-01-24 18:00:55','size',1,NULL,'Number of pages in the index'),('iarsa','job_batches','PRIMARY','2025-01-24 18:00:51','n_diff_pfx01',0,1,'id'),('iarsa','job_batches','PRIMARY','2025-01-24 18:00:51','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','job_batches','PRIMARY','2025-01-24 18:00:51','size',1,NULL,'Number of pages in the index'),('iarsa','jobs','PRIMARY','2025-01-24 18:00:50','n_diff_pfx01',0,1,'id'),('iarsa','jobs','PRIMARY','2025-01-24 18:00:50','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','jobs','PRIMARY','2025-01-24 18:00:50','size',1,NULL,'Number of pages in the index'),('iarsa','jobs','jobs_queue_index','2025-01-24 18:00:50','n_diff_pfx01',0,1,'queue'),('iarsa','jobs','jobs_queue_index','2025-01-24 18:00:50','n_diff_pfx02',0,1,'queue,id'),('iarsa','jobs','jobs_queue_index','2025-01-24 18:00:50','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','jobs','jobs_queue_index','2025-01-24 18:00:50','size',1,NULL,'Number of pages in the index'),('iarsa','migrations','PRIMARY','2025-01-24 18:01:03','n_diff_pfx01',8,1,'id'),('iarsa','migrations','PRIMARY','2025-01-24 18:01:03','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','migrations','PRIMARY','2025-01-24 18:01:03','size',1,NULL,'Number of pages in the index'),('iarsa','obras','PRIMARY','2025-01-24 18:00:55','n_diff_pfx01',0,1,'id'),('iarsa','obras','PRIMARY','2025-01-24 18:00:55','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','obras','PRIMARY','2025-01-24 18:00:55','size',1,NULL,'Number of pages in the index'),('iarsa','password_reset_tokens','PRIMARY','2025-01-24 18:00:46','n_diff_pfx01',0,1,'email'),('iarsa','password_reset_tokens','PRIMARY','2025-01-24 18:00:46','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','password_reset_tokens','PRIMARY','2025-01-24 18:00:46','size',1,NULL,'Number of pages in the index'),('iarsa','pdiarios','PRIMARY','2025-01-24 18:00:56','n_diff_pfx01',0,1,'id'),('iarsa','pdiarios','PRIMARY','2025-01-24 18:00:56','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','pdiarios','PRIMARY','2025-01-24 18:00:56','size',1,NULL,'Number of pages in the index'),('iarsa','sessions','PRIMARY','2025-01-24 18:00:47','n_diff_pfx01',0,1,'id'),('iarsa','sessions','PRIMARY','2025-01-24 18:00:47','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','sessions','PRIMARY','2025-01-24 18:00:47','size',1,NULL,'Number of pages in the index'),('iarsa','sessions','sessions_last_activity_index','2025-01-24 18:00:47','n_diff_pfx01',0,1,'last_activity'),('iarsa','sessions','sessions_last_activity_index','2025-01-24 18:00:47','n_diff_pfx02',0,1,'last_activity,id'),('iarsa','sessions','sessions_last_activity_index','2025-01-24 18:00:47','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','sessions','sessions_last_activity_index','2025-01-24 18:00:47','size',1,NULL,'Number of pages in the index'),('iarsa','sessions','sessions_user_id_index','2025-01-24 18:00:47','n_diff_pfx01',0,1,'user_id'),('iarsa','sessions','sessions_user_id_index','2025-01-24 18:00:47','n_diff_pfx02',0,1,'user_id,id'),('iarsa','sessions','sessions_user_id_index','2025-01-24 18:00:47','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','sessions','sessions_user_id_index','2025-01-24 18:00:47','size',1,NULL,'Number of pages in the index'),('iarsa','users','PRIMARY','2025-01-24 18:00:45','n_diff_pfx01',0,1,'id'),('iarsa','users','PRIMARY','2025-01-24 18:00:45','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','users','PRIMARY','2025-01-24 18:00:45','size',1,NULL,'Number of pages in the index'),('iarsa','users','users_email_unique','2025-01-24 18:00:45','n_diff_pfx01',0,1,'email'),('iarsa','users','users_email_unique','2025-01-24 18:00:45','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('iarsa','users','users_email_unique','2025-01-24 18:00:45','size',1,NULL,'Number of pages in the index'),('mysql','component','PRIMARY','2024-12-27 11:30:42','n_diff_pfx01',0,1,'component_id'),('mysql','component','PRIMARY','2024-12-27 11:30:42','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('mysql','component','PRIMARY','2024-12-27 11:30:42','size',1,NULL,'Number of pages in the index'),('sys','sys_config','PRIMARY','2024-12-14 19:24:57','n_diff_pfx01',6,1,'variable'),('sys','sys_config','PRIMARY','2024-12-14 19:24:57','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('sys','sys_config','PRIMARY','2024-12-14 19:24:57','size',1,NULL,'Number of pages in the index');
 /*!40000 ALTER TABLE `innodb_index_stats` ENABLE KEYS */;
 
 --
@@ -360,7 +360,7 @@ INSERT  IGNORE INTO `innodb_index_stats` VALUES ('iarsa','cache','PRIMARY','2024
 --
 
 /*!40000 ALTER TABLE `innodb_table_stats` DISABLE KEYS */;
-INSERT  IGNORE INTO `innodb_table_stats` VALUES ('iarsa','cache','2024-12-27 11:31:14',0,1,0),('iarsa','cache_locks','2024-12-27 11:31:16',0,1,0),('iarsa','comitentes','2024-12-27 11:31:18',0,1,0),('iarsa','equipos','2024-12-27 11:31:20',0,1,1),('iarsa','failed_jobs','2024-12-27 11:31:22',0,1,1),('iarsa','items','2024-12-27 11:31:24',0,1,0),('iarsa','job_batches','2024-12-27 11:31:27',0,1,0),('iarsa','jobs','2024-12-27 11:31:30',0,1,1),('iarsa','migrations','2024-12-27 11:31:33',0,1,0),('iarsa','obras','2024-12-27 11:31:37',0,1,0),('iarsa','password_reset_tokens','2024-12-27 11:31:39',0,1,0),('iarsa','pdiarios','2025-01-21 16:07:19',5,1,0),('iarsa','sessions','2024-12-27 11:31:43',0,1,2),('iarsa','users','2024-12-27 11:31:45',0,1,1),('mysql','component','2024-12-27 11:30:42',0,1,0),('sys','sys_config','2024-12-14 19:24:57',6,1,0);
+INSERT  IGNORE INTO `innodb_table_stats` VALUES ('iarsa','cache','2025-01-24 18:00:48',0,1,0),('iarsa','cache_locks','2025-01-24 18:00:49',0,1,0),('iarsa','comitentes','2025-01-24 18:00:53',0,1,0),('iarsa','equipos','2025-01-24 18:00:54',0,1,0),('iarsa','failed_jobs','2025-01-24 18:00:52',0,1,0),('iarsa','items','2025-01-24 18:00:55',0,1,0),('iarsa','job_batches','2025-01-24 18:00:51',0,1,0),('iarsa','jobs','2025-01-24 18:00:50',0,1,0),('iarsa','migrations','2025-01-24 18:01:03',8,1,0),('iarsa','obras','2025-01-24 18:00:55',0,1,0),('iarsa','password_reset_tokens','2025-01-24 18:00:46',0,1,0),('iarsa','pdiarios','2025-01-24 18:00:56',0,1,0),('iarsa','sessions','2025-01-24 18:00:47',0,1,0),('iarsa','users','2025-01-24 18:00:45',0,1,0),('mysql','component','2024-12-27 11:30:42',0,1,0),('sys','sys_config','2024-12-14 19:24:57',6,1,0);
 /*!40000 ALTER TABLE `innodb_table_stats` ENABLE KEYS */;
 
 --
@@ -1080,8 +1080,8 @@ DROP TABLE IF EXISTS `cache`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `cache` (
-  `key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `value` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `value` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `expiration` int NOT NULL,
   PRIMARY KEY (`key`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1104,8 +1104,8 @@ DROP TABLE IF EXISTS `cache_locks`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `cache_locks` (
-  `key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `owner` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `owner` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `expiration` int NOT NULL,
   PRIMARY KEY (`key`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1129,12 +1129,12 @@ DROP TABLE IF EXISTS `comitentes`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `comitentes` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `comitente` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `comitente` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `activo` tinyint(1) NOT NULL DEFAULT '1',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1143,7 +1143,6 @@ CREATE TABLE `comitentes` (
 
 LOCK TABLES `comitentes` WRITE;
 /*!40000 ALTER TABLE `comitentes` DISABLE KEYS */;
-INSERT INTO `comitentes` VALUES (1,'Municipalidad de Azul',1,'2024-12-26 19:20:16','2024-12-26 19:20:16'),(2,'Gob. de Prov. Buenos Aires',1,'2024-12-26 19:20:54','2024-12-26 19:20:54'),(3,'Comitente Inactivo',0,'2024-12-26 19:21:07','2024-12-26 19:21:15');
 /*!40000 ALTER TABLE `comitentes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1156,12 +1155,12 @@ DROP TABLE IF EXISTS `equipos`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `equipos` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `marca` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `codigo` varchar(6) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `tipo` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `modelo` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `potencia` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `patente` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `marca` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `codigo` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tipo` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `modelo` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `potencia` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `patente` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
   `activo` tinyint(1) NOT NULL DEFAULT '1',
   `max` smallint unsigned NOT NULL,
   `control` smallint unsigned NOT NULL,
@@ -1169,7 +1168,7 @@ CREATE TABLE `equipos` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `equipos_codigo_unique` (`codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1178,7 +1177,6 @@ CREATE TABLE `equipos` (
 
 LOCK TABLES `equipos` WRITE;
 /*!40000 ALTER TABLE `equipos` DISABLE KEYS */;
-INSERT INTO `equipos` VALUES (1,'equipo al 100%','cc-132','ok','mod','potencia','asd123',1,1500,300,'2024-12-26 20:32:29','2025-01-21 16:00:20'),(2,'medio','mm-99','medio','modemedio','potencia1','qew123',1,1500,231,'2024-12-26 20:33:18','2025-01-21 16:00:36'),(3,'bajo','bb-92','bajo','bajo','pot44','kjk121',1,1500,872,'2024-12-26 20:33:56','2025-01-21 16:08:13');
 /*!40000 ALTER TABLE `equipos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1191,11 +1189,11 @@ DROP TABLE IF EXISTS `failed_jobs`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `failed_jobs` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `uuid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `connection` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `queue` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `exception` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`)
@@ -1223,13 +1221,13 @@ CREATE TABLE `items` (
   `activo` tinyint(1) NOT NULL DEFAULT '1',
   `obra` bigint unsigned DEFAULT NULL,
   `numero` tinyint unsigned NOT NULL,
-  `item` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `unidad` varchar(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `item` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `unidad` varchar(2) COLLATE utf8mb4_unicode_ci NOT NULL,
   `cantidad` smallint unsigned NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1238,7 +1236,6 @@ CREATE TABLE `items` (
 
 LOCK TABLES `items` WRITE;
 /*!40000 ALTER TABLE `items` DISABLE KEYS */;
-INSERT INTO `items` VALUES (1,1,1,1,'Item 1','Tn',2000,'2024-12-26 20:08:03','2024-12-26 20:08:03'),(2,0,1,2,'Item 2','km',100,'2024-12-26 20:08:03','2024-12-26 20:12:43');
 /*!40000 ALTER TABLE `items` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1250,13 +1247,13 @@ DROP TABLE IF EXISTS `job_batches`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `job_batches` (
-  `id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `total_jobs` int NOT NULL,
   `pending_jobs` int NOT NULL,
   `failed_jobs` int NOT NULL,
-  `failed_job_ids` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `options` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `failed_job_ids` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `options` mediumtext COLLATE utf8mb4_unicode_ci,
   `cancelled_at` int DEFAULT NULL,
   `created_at` int NOT NULL,
   `finished_at` int DEFAULT NULL,
@@ -1282,8 +1279,8 @@ DROP TABLE IF EXISTS `jobs`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `jobs` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `queue` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `attempts` tinyint unsigned NOT NULL,
   `reserved_at` int unsigned DEFAULT NULL,
   `available_at` int unsigned NOT NULL,
@@ -1311,7 +1308,7 @@ DROP TABLE IF EXISTS `migrations`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `migrations` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `migration` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1323,7 +1320,7 @@ CREATE TABLE `migrations` (
 
 LOCK TABLES `migrations` WRITE;
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
-INSERT INTO `migrations` VALUES (1,'0001_01_01_000000_create_users_table',1),(2,'0001_01_01_000001_create_cache_table',1),(3,'0001_01_01_000002_create_jobs_table',1),(4,'2024_12_14_221905_create_comitentes_table',1),(5,'2024_12_17_195340_create_equipos_table',1),(6,'2024_12_19_142935_create_obras_table',1),(7,'2024_12_20_125411_create_items_table',1),(8,'2024_12_27_111319_create_pdiarios_table',2);
+INSERT INTO `migrations` VALUES (1,'0001_01_01_000000_create_users_table',1),(2,'0001_01_01_000001_create_cache_table',1),(3,'0001_01_01_000002_create_jobs_table',1),(4,'2024_12_14_221905_create_comitentes_table',1),(5,'2024_12_17_195340_create_equipos_table',1),(6,'2024_12_19_142935_create_obras_table',1),(7,'2024_12_20_125411_create_items_table',1),(8,'2024_12_27_111319_create_pdiarios_table',1);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1336,8 +1333,8 @@ DROP TABLE IF EXISTS `obras`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `obras` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `licitacion` varchar(11) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nombre` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `licitacion` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL,
   `comitente` bigint unsigned NOT NULL,
   `inicio` date NOT NULL,
   `plazo` tinyint unsigned NOT NULL,
@@ -1345,7 +1342,7 @@ CREATE TABLE `obras` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1354,7 +1351,6 @@ CREATE TABLE `obras` (
 
 LOCK TABLES `obras` WRITE;
 /*!40000 ALTER TABLE `obras` DISABLE KEYS */;
-INSERT INTO `obras` VALUES (1,'Obra de Azul','LL01032025',1,'2025-03-20',10,1,'2024-12-26 19:22:00','2024-12-26 19:22:00'),(2,'Nueva Obra Inactiva','LL1234',2,'2025-01-03',11,0,'2024-12-27 23:42:15','2024-12-27 23:42:21');
 /*!40000 ALTER TABLE `obras` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1366,8 +1362,8 @@ DROP TABLE IF EXISTS `password_reset_tokens`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `password_reset_tokens` (
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1397,15 +1393,15 @@ CREATE TABLE `pdiarios` (
   `equipo` bigint unsigned DEFAULT NULL,
   `fecha` date DEFAULT NULL,
   `horas` tinyint unsigned NOT NULL,
+  `hist` smallint unsigned DEFAULT NULL,
   `combustible` tinyint unsigned NOT NULL,
   `aceite` tinyint unsigned NOT NULL,
   `lubricante` tinyint unsigned NOT NULL,
   `obs` tinytext COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `hist` smallint unsigned DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1414,7 +1410,6 @@ CREATE TABLE `pdiarios` (
 
 LOCK TABLES `pdiarios` WRITE;
 /*!40000 ALTER TABLE `pdiarios` DISABLE KEYS */;
-INSERT INTO `pdiarios` VALUES (1,NULL,NULL,NULL,NULL,'2024-12-27',7,123,12,42,'Observaciones','2024-12-27 21:40:34','2024-12-27 21:40:34',NULL),(2,NULL,NULL,NULL,3,'2024-12-28',4,123,21,32,'12','2024-12-27 22:31:11','2024-12-27 22:31:11',NULL),(3,NULL,NULL,NULL,3,'2024-12-28',4,123,21,32,'12','2024-12-27 22:31:59','2024-12-27 22:31:59',NULL),(4,NULL,NULL,NULL,3,'2024-12-28',4,123,21,32,'12','2024-12-27 22:36:48','2024-12-27 22:36:48',NULL),(5,2,1,1,3,'2024-12-28',10,210,89,12,'obs','2024-12-27 22:39:22','2024-12-27 22:39:22',NULL),(6,2,1,1,3,'2025-01-17',10,200,10,10,'obs','2025-01-21 16:08:13','2025-01-21 16:08:13',872);
 /*!40000 ALTER TABLE `pdiarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1426,11 +1421,11 @@ DROP TABLE IF EXISTS `sessions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `sessions` (
-  `id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_id` bigint unsigned DEFAULT NULL,
-  `ip_address` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `user_agent` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ip_address` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_agent` text COLLATE utf8mb4_unicode_ci,
+  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `last_activity` int NOT NULL,
   PRIMARY KEY (`id`),
   KEY `sessions_user_id_index` (`user_id`),
@@ -1456,18 +1451,18 @@ DROP TABLE IF EXISTS `users`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
-  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `rol` varchar(3) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'opr',
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `rol` varchar(3) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'opr',
   `activo` tinyint(1) NOT NULL DEFAULT '1',
-  `remember_token` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1476,7 +1471,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Administrador','admin@admin.com',NULL,'$2y$12$TuU5hzyZpq1gvP9qjj38jOIDIvmRQ2cSda5VxHObzRupFQRbwO.HK','adm',1,NULL,'2024-12-26 19:03:45','2024-12-26 19:03:45'),(2,'david','davidmauroweb@gmail.com',NULL,'$2y$12$9TfthNXBhY.pAdcDC16EiOqrwj2MRA0xTs9RsIwF2P5tFnIjJNuOO','opr',1,NULL,'2024-12-26 22:50:30','2024-12-26 22:50:30'),(3,'Mantenimiento','mnt@mnt.com',NULL,'$2y$12$65BNyzj9aeCE68/l9fBlD.Kgu5DVt5P2esqWzp.k9il5HNLfEl4u.','mnt',1,NULL,'2024-12-27 11:33:33','2025-01-03 13:36:31');
+INSERT INTO `users` VALUES (1,'Administrador','admin@admin.com',NULL,'$2y$12$DSdkQGT4gUku5WUufUf4tO4A94F9GBcBlFILEX/Mpp2lUUpDnKo2e','adm',1,NULL,'2025-01-24 18:02:17','2025-01-24 18:02:17');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1498,4 +1493,4 @@ USE `testing`;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-01-24 18:00:26
+-- Dump completed on 2025-01-24 18:04:13

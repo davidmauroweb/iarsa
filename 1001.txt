@@ -1,0 +1,25 @@
+1-Carpeta AM3 de 0,06 m de espesor y 7,30 m-m2-66430
+2-Carpeta CA30 de 0,07 m de espesor y 6,00m-m2-18000
+3-Carpeta CA30 de 0,06 m de espesor para banquinas -m2-7650
+4-Fresado de pavimento existente e=0,05 m-m2-161080
+5-Fresado para Bacheo Superficial-m2-1066
+6-Fresado para Bacheo Profundo-m2-5798
+7-Base granular asfáltica CA30 de 0,08 m de espesor-m2-72520
+8-Base y SubBase de estabilizado granular con RAP y cemento en 0,20 m de espesor-m2-82430
+9-Base de Estabilizado Granular con RAP para bacheo profundo-m2-21098
+10-Mezcla asfáltica para bacheo-Tn-1770
+11-Riego de liga con E.B.-1 a razón de 0,6 l/m2 o 360 gr/m2 de Residuo Asfáltico-lts-63020
+12-Riego de liga modificado con polímeros tipo CRRm a razón de 0,3 lts/m2-lts-19929
+13-Sub base de suelo cal en 0,20 m de espesor-m2-8550
+14-Perfilado y recompactación de la subrasante-m2-8550
+15-Excavación de caja-m3-3933
+16-Reconformación de banquinas con provisión de suelo-m-19600
+17-Reconformación de banquinas con RAP y provisión de suelo-m-6000
+18-Limpieza y desobstrucción de préstamos y alcantarillas laterales-Gl-1
+19-Mantenimiento rutinario de alcantarillas transversales-Gl-1
+20-Mantenimiento rutinario de puentes-Gl-1
+21-Baranda metálica tipo "flex beam" para defensa vehicular-m-1500
+22-Refugio tipo suburbano y rural para pasajeros s/pl tipo C-I-1175-Un-6
+23-Dársena rural para ascenso y descenso de pasajeros s/pl tipo C-I-1174-Un-6
+32-Mantenimiento de desvíos-Mes-14
+

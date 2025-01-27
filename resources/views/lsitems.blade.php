@@ -38,7 +38,6 @@
                                                     <div class="modal-body">
                                                     <input type="hidden" name="id" value="{{$u->id}}">
                                                     <input type="hidden" name="obra" value="{{$obra->id}}">
-                                                    <input type="hidden" name="pg" value="{{$items->currentPage()}}">
                                                     <div class="row mb-3">
                                                     <label for="name-{{$u->id}}" class="col-md-4 col-form-label text-md-end">{{ __('Nombre') }}</label>
                                                     <div class="col-md-6">
@@ -67,7 +66,8 @@
                         @endforeach
                     </tbody>
                 </table>
-                </div>
+</div>
+<div class="mx-3"><ul class="pagination">{{ $items->links() }}</ul></div>
                 <div class="card-footer">
                 <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#mm">Agregar</button>  <a href="{{ route('lsobras') }}"><button class="btn btn-secondary btn-sm">Volver</button></a>
                 <!-- Modal -->
@@ -90,10 +90,8 @@
                             </div>
                             </div>
                             <div class="modal-footer">
-
                                 <div class="col-md-8 text-secondary">* #-Nombre-unidad-cantidad <br></div>
-                                <div class="col-md-2">
-                                <button type="submit" class="btn btn-success btn-sm">Agregar</button>
+                                <div class="col-md-2"><button type="submit" class="btn btn-success btn-sm">Agregar</button>
                                 </div>
                             </div>
                         </form>

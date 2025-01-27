@@ -17,8 +17,8 @@ return new class extends Migration
             $table->foreignId('obra')->nullable('false');
             $table->unsignedTinyInteger('numero');
             $table->string('item', length:150)->nullable('false');
-            $table->string('unidad',2);
-            $table->unsignedSmallInteger('cantidad');
+            $table->string('unidad',3);
+            $table->unsignedMediumInteger('cantidad');
             $table->timestamps();
         });
     }
