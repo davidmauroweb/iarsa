@@ -50,6 +50,7 @@
                         @endforeach
                     </tbody>
                 </table>
+                <div class="mx-3"><ul class="pagination">{{ $partes->links() }}</ul></div>
                 </div>
             </div>
         </div>

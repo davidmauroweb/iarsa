@@ -106,6 +106,7 @@
                         @endforeach
                     </tbody>
                 </table>
+                <div class="mx-3"><ul class="pagination">{{ $obras->links() }}</ul></div>
                 </div>
                 <div class="card-footer">
                 <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#mm">Agregar</button>
