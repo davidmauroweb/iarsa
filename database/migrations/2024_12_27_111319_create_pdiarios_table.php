@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignId('equipo')->nullable('false');
             $table->date('fecha')->nullable('false');
             $table->unsignedTinyInteger('horas');
-            $table->unsignedSmallInteger('hist')->nullable('false');
+            $table->smallInteger('hist')->nullable('false');
             $table->unsignedTinyInteger('combustible');
             $table->unsignedTinyInteger('aceite');
             $table->unsignedTinyInteger('lubricante');

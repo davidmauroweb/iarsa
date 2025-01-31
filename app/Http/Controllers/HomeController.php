@@ -28,7 +28,7 @@ class HomeController extends Controller
             case('mnt'):
                 return redirect()->route('lsequipos');
             case('obr'):
-                return redirect()->route('lsobra');
+                return redirect()->route('lsobras');
             case('cnt'):
                 return redirect()->route('lsus');
             case('opr'):

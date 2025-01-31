@@ -29,12 +29,13 @@
                             <th>Aceite</th>
                             <th>Lub</th>
                             <th>Obs</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($partes as $p)
                         <tr>
-                            <td>{{$p->fecha}}</td>
+                            <td>{{$p->fecha}} ({{$p->pdid}})</td>
                             <td>{{$p->name}}</td>
                             <td>{{$p->nombre}}</td>
                             <td>{{$p->codigo}}</td>
@@ -46,6 +47,19 @@
                             <td>{{$p->aceite}}</td>
                             <td>{{$p->lubricante}}</td>
                             <td>{{$p->obs}}</td>
+                            <td>
+                            <form action="{{route('dpdiario')}}" method="post">
+                            @csrf
+                                <input type="hidden" name="pd_id" value="{{$p->pdid}}">
+                                <input type="hidden" name="eq_id" value="{{$p->eqid}}">
+                                <input type="hidden" name="horas" value="{{$p->horas}}">
+                                <input type="hidden" name="b" value="{{$acc}}">
+                                <input type="hidden" name="id" value="{{$idex}}">
+                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('¿Desea deshacer el parte de {{$p->name}}?')" title="Deshacer">
+                                <i class="bi bi-trash-fill"> ({{$p->pdid}}) </i>
+                                </button>
+                            </form>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>

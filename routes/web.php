@@ -9,6 +9,10 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::group(['middleware' => 'adm'], function () {
+    Route::post('/dpdiario', [PdiarioController::class, 'destroy'])->name('dpdiario');
+});
+
 Route::group(['middleware' => 'cnt'], function () {
 //USUARIOS
 Route::get('/lsusers', [App\Http\Controllers\lsusers::class, 'lista'])->name('lsus');

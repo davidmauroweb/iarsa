@@ -65,7 +65,7 @@ class PdiarioController extends Controller
     {
         $obra = DB::table('obras')->select('nombre','id')->where('id','=',$request->id_obra)->first();
         $items = DB::table('items')->select('item','id')->where('obra','=',$request->id_obra)->where('activo','=',1)->get();
-        $equipos = equipos::orderBy('codigo')->where('activo','=',1)->get();
+        $equipos = equipos::select('id','codigo')->orderBy('codigo')->where('activo','=',1)->get();
         return view('partediario', ['obra'=>$obra, 'items'=>$items, 'equipos'=>$equipos]);
     }
 
@@ -74,7 +74,7 @@ class PdiarioController extends Controller
     {
         if($request->b == 'e'){
         $partes = DB::table('pdiarios')
-            ->select('pdiarios.fecha','pdiarios.horas','pdiarios.hist','pdiarios.combustible','pdiarios.aceite','pdiarios.lubricante','pdiarios.obs','equipos.codigo','equipos.max','equipos.control','obras.nombre','items.item','users.name')
+            ->select('pdiarios.id AS pdid','equipos.id AS eqid','pdiarios.fecha','pdiarios.horas','pdiarios.hist','pdiarios.combustible','pdiarios.aceite','pdiarios.lubricante','pdiarios.obs','equipos.codigo','equipos.max','equipos.control','obras.nombre','items.item','users.name')
             ->join('equipos','pdiarios.equipo','equipos.id')
             ->join('obras','pdiarios.obra','obras.id')
             ->join('users','pdiarios.usuario','users.id')
@@ -86,7 +86,7 @@ class PdiarioController extends Controller
         $titulo = " Equipo Cod.:<b>".$equipo->codigo."</b> Marca:<b>".$equipo->marca."</b> Patente:<b>".$equipo->patente."</b>";
         }else{
             $partes = DB::table('pdiarios')
-            ->select('pdiarios.fecha','pdiarios.horas','pdiarios.hist','pdiarios.combustible','pdiarios.aceite','pdiarios.lubricante','pdiarios.obs','equipos.codigo','equipos.max','equipos.control','obras.nombre','items.item','users.name')
+            ->select('pdiarios.id AS pdid','equipos.id AS eqid','pdiarios.fecha','pdiarios.horas','pdiarios.hist','pdiarios.combustible','pdiarios.aceite','pdiarios.lubricante','pdiarios.obs','equipos.codigo','equipos.max','equipos.control','obras.nombre','items.item','users.name')
             ->join('equipos','pdiarios.equipo','equipos.id')
             ->join('obras','pdiarios.obra','obras.id')
             ->join('users','pdiarios.usuario','users.id')
@@ -128,8 +128,14 @@ class PdiarioController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(pdiario $pdiario)
+    public function destroy(Request $request)
     {
-        //
+        $des=equipos::find($request->eq_id);
+        $ncontrol = $des->control - $request->horas;
+        $des->control = $ncontrol;
+        $des->save();
+        $del=pdiario::find($request->pd_id);
+        $del->delete();
+        return redirect()->route('lsequipos')->with('mensajeOk','Parte Eliminado');
     }
 }
