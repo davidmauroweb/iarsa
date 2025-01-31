@@ -65,7 +65,7 @@ class PdiarioController extends Controller
     {
         $obra = DB::table('obras')->select('nombre','id')->where('id','=',$request->id_obra)->first();
         $items = DB::table('items')->select('item','id')->where('obra','=',$request->id_obra)->where('activo','=',1)->get();
-        $equipos = equipos::all()->where('activo','=',1);
+        $equipos = equipos::orderBy('codigo')->where('activo','=',1)->get();
         return view('partediario', ['obra'=>$obra, 'items'=>$items, 'equipos'=>$equipos]);
     }
 

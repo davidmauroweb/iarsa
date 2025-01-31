@@ -86,8 +86,11 @@ class RegisterController extends Controller
     protected function mus(Request $request, User $u)
     {
         $Mus = User::find($u->id);
+        if ($request['password']!=""){
         $Mus->password = Hash::make($request['password']);
+        }
+        $Mus->rol=$request->rol;
         $Mus->save();
-        return redirect()->route('lsus')->with('mensajeOk',$Mus->name.' Ha cambiado la clave.');        
+        return redirect()->route('lsus')->with('mensajeOk',$Mus->name.' Modificado.');        
     }
 }

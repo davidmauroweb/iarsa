@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('tipo', length: 20);
             $table->string('modelo', length: 20);
             $table->string('potencia', length:10);
-            $table->string('patente', length:10);
+            $table->string('patente', length:30);
             $table->boolean('activo')->default(1);
             $table->unsignedSmallInteger('max');
             $table->unsignedSmallInteger('control');

@@ -90,7 +90,7 @@
                             </div>
                             </div>
                             <div class="modal-footer">
-                                <div class="col-md-8 text-secondary">* #-Nombre-unidad-cantidad <br></div>
+                                <div class="col-md-8 text-secondary">* #_Nombre_unidad_cantidad ¶<br></div>
                                 <div class="col-md-2"><button type="submit" class="btn btn-success btn-sm">Agregar</button>
                                 </div>
                             </div>

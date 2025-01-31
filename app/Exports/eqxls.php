@@ -13,7 +13,8 @@ class eqxls implements FromView,ShouldAutoSize
     */
     public function view():View
     {
-        $eqs = equipos::all();
+        $eqs = equipos::orderBy('codigo')
+                ->get();
         return view('eqxls',['eqs'=>$eqs]);
     }
 }

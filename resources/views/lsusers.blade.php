@@ -47,9 +47,22 @@
                             </div>
                             <div class="modal-body">
                             <div class="row mb-3">
+                            <label for="rol" class="col-md-4 col-form-label text-md-end">{{ __('Rol') }}</label>
+
+                            <div class="col-md-6">
+                            <select id="rol" class="form-control" name="rol">
+                                <option value="opr" @if ($u->rol == "opr") selected @endif>Operario</option>
+                                <option value="mnt" @if ($u->rol == "mnt") selected @endif>Mantenimiento</option>
+                                <option value="obr" @if ($u->rol == "obr") selected @endif>Jefe de Obra</option>
+                                <option value="cnt" @if ($u->rol == "cnt") selected @endif>Oficina Central</option>
+                                <option value="adm" @if ($u->rol == "adm") selected @endif>Administrador</option>
+                            </select>
+                            </div>
+                        </div>
+                            <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Clave') }}</label>
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password">
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -60,7 +73,7 @@
                         <div class="row mb-3">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirmar Clave') }}</label>
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" autocomplete="new-password">
                             </div>
                         </div>
                             </div>
