@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class obra
+class mntobr
 {
     /**
      * Handle an incoming request.
@@ -15,11 +15,11 @@ class obra
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (auth()->user()->rol=="adm" || auth()->user()->rol=="obr")
+        if (auth()->user()->rol=="adm" || auth()->user()->rol=="obr" || auth()->user()->rol=="mnt")
         {
         return $next($request);
         };
 
-        return redirect()->route('home')->with('mensajeNo','Acceso para Jefe de Obra.');
+        return redirect()->route('home')->with('mensajeNo','Acceso para Jefe de Obra o Mantenimiento.');
     }
 }

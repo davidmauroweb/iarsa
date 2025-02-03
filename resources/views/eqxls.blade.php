@@ -7,7 +7,7 @@
             <th>Modelo</th>
             <th>Patente</th>
             <th>Potencia</th>
-            <th>Resto</th>
+            <th>Service</th>
         </tr>
     </thead>
     <tbody>
@@ -21,7 +21,7 @@
             <td>{{$u->modelo}}</td>
             <td>{{$u->patente}}</td>
             <td>{{$u->potencia}}</td>
-            <td></td>
+            <td>{{$resto}}</td>
         </tr>
         @endforeach
     </tbody>

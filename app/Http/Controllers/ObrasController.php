@@ -71,6 +71,7 @@ class ObrasController extends Controller
         $nuevo->nombre = $request->nombre;
         $nuevo->licitacion = $request->licitacion;
         $nuevo->comitente = $request->comitente;
+        $nuevo->plazo = $request->plazo;
         $nuevo->activo = $request->activo;
         $nuevo->save();
         $param = "page=".$request->pg;

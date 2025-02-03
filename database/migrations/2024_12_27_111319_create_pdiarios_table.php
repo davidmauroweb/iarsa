@@ -20,7 +20,7 @@ return new class extends Migration
             $table->date('fecha')->nullable('false');
             $table->unsignedTinyInteger('horas');
             $table->smallInteger('hist')->nullable('false');
-            $table->unsignedTinyInteger('combustible');
+            $table->unsignedSmallInteger('combustible');
             $table->unsignedTinyInteger('aceite');
             $table->unsignedTinyInteger('lubricante');
             $table->tinyText('obs');

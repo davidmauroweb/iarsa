@@ -19,8 +19,14 @@
                         <tr>
                             <th>Fecha</th>
                             <th>Usuario</th>
+                            @if ($acc=='e')
                             <th>Obra</th>
+                            @endif
+                            @if ($acc=='o')
                             <th>Equipo</th>
+                            <th>Tipo</th>
+                            <th>Modelo</th>
+                            @endif
                             <th>Item</th>
                             <th>Horas</th>
                             <th>Fin</th>
@@ -35,10 +41,16 @@
                     <tbody>
                         @foreach($partes as $p)
                         <tr>
-                            <td>{{$p->fecha}} ({{$p->pdid}})</td>
+                            <td>{{$p->fecha}}</td>
                             <td>{{$p->name}}</td>
+                            @if ($acc=='e')
                             <td>{{$p->nombre}}</td>
+                            @endif
+                            @if ($acc=='o')
                             <td>{{$p->codigo}}</td>
+                            <td>{{$p->tipo}}</td>
+                            <td>{{$p->modelo}}</td>
+                            @endif
                             <td>{{$p->item}}</td>
                             <td>{{$p->horas}}</td>
                             <td>{{$p->hist}}</td>
@@ -56,7 +68,7 @@
                                 <input type="hidden" name="b" value="{{$acc}}">
                                 <input type="hidden" name="id" value="{{$idex}}">
                                 <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('¿Desea deshacer el parte de {{$p->name}}?')" title="Deshacer">
-                                <i class="bi bi-trash-fill"> ({{$p->pdid}}) </i>
+                                <i class="bi bi-trash-fill"></i>
                                 </button>
                             </form>
                             </td>

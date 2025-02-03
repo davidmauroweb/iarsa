@@ -15,7 +15,7 @@ class operario
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (auth()->user()->rol=="adm" || auth()->user()->rol=="opr")
+        if (auth()->user()->rol=="opr")
         {
         return $next($request);
         };

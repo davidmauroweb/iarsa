@@ -1,5 +1,5 @@
 <?php
-use App\Http\Middleware\{AdminMiddleware,central,mantenimiento,obra,operario};
+use App\Http\Middleware\{AdminMiddleware,central,mantenimiento,obra,operario,mntobr};
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -16,9 +16,11 @@ return Application::configure(basePath: dirname(__DIR__))
             'cnt' => central::class,
             'mnt' => mantenimiento::class,
             'obr' => obra::class,
-            'opr' => operario::class
+            'opr' => operario::class,
+            'mntobr' => mntobr::class
         ]);
     })
+
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })->create();

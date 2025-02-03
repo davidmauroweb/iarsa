@@ -54,7 +54,7 @@
                     <div class="row mb-3">
                     <label for="comb" class="col-md-4 col-form-label text-md-end">{{ __('Combustible') }}</label>
                             <div class="col-md-6">
-                                <input id="comb" type="number" class="form-control" name="combustible" required mint="1" max="250">
+                                <input id="comb" type="number" class="form-control" name="combustible" required mint="1" max="500">
                             </div>
                     </div><!-- ROW -->
                     <div class="row mb-3">

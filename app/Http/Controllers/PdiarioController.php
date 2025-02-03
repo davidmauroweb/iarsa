@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\{pdiario,equipos,obras};
 use App\Exports\exportpd;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\{DB,Auth};
 use Maatwebsite\Excel\Facades\Excel;
 
 class PdiarioController extends Controller
@@ -19,6 +19,7 @@ class PdiarioController extends Controller
         ->select('fecha','items.item','equipos.codigo')
         ->join('items','pdiarios.item','items.id')
         ->join('equipos','pdiarios.equipo','equipos.id')
+        ->where('usuario','=',Auth::user()->id)
         ->orderByDesc('pdiarios.fecha')
         ->take(5)->get();
         $obras=obras::all()->where('activo','=',1);
@@ -86,7 +87,7 @@ class PdiarioController extends Controller
         $titulo = " Equipo Cod.:<b>".$equipo->codigo."</b> Marca:<b>".$equipo->marca."</b> Patente:<b>".$equipo->patente."</b>";
         }else{
             $partes = DB::table('pdiarios')
-            ->select('pdiarios.id AS pdid','equipos.id AS eqid','pdiarios.fecha','pdiarios.horas','pdiarios.hist','pdiarios.combustible','pdiarios.aceite','pdiarios.lubricante','pdiarios.obs','equipos.codigo','equipos.max','equipos.control','obras.nombre','items.item','users.name')
+            ->select('pdiarios.id AS pdid','equipos.id AS eqid','pdiarios.fecha','pdiarios.horas','pdiarios.hist','pdiarios.combustible','pdiarios.aceite','pdiarios.lubricante','pdiarios.obs','equipos.codigo','equipos.tipo','equipos.modelo','equipos.max','equipos.control','items.item','users.name')
             ->join('equipos','pdiarios.equipo','equipos.id')
             ->join('obras','pdiarios.obra','obras.id')
             ->join('users','pdiarios.usuario','users.id')
