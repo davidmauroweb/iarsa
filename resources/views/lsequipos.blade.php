@@ -46,8 +46,7 @@
                             <i class="bi bi-check-circle text-success"></i>
                             @endif
                             </td>
-                            <td><form method="POST" action="{{route('lspdmnt')}}">
-                                @csrf
+                            <td><form method="GET" action="{{route('lspdmnt')}}">
                                 <input type="hidden" name="b" value="e">
                                 <input type="hidden" name="id" value="{{$u->id}}">
                                 <button type="submit" class="btn btn-secondary btn-sm"><i class="bi bi-list-columns"></i></button>
@@ -146,7 +145,6 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                         <form method="POST" action="{{ route('nequipos') }}">
-                        @csrf
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Agregar Equipamiento</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -221,7 +219,7 @@
             </div><!-- Card -->
         </div><!-- colmd8 -->
         <div class="row justify-content-center my-3">
-            <form class="form-inline" method="POST" action="{{route('lspdmnt')}}">
+            <form class="form-inline" method="GET" action="{{route('lspdmnt')}}">
                 @csrf
                 <input type="hidden" name="b" value="o">
                 <table>

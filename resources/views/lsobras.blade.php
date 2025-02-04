@@ -36,8 +36,7 @@
                                     <button class="btn btn-sm btn-secondary"><i class="bi bi-list-check"></i></button>
                                     </a></td>
                             <td>
-                            <form class="form-inline" method="POST" action="{{route('lspdmnt')}}">
-                                @csrf
+                            <form class="form-inline" method="GET" action="{{route('lspdmnt')}}">
                                 <input type="hidden" name="b" value="o">
                                 <input type="hidden" name="id" value="{{$u->id}}">
                                 <button type="submit" class="btn btn-secondary btn-sm  mx-sm-3"><i class="bi bi-search"></i></button>

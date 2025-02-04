@@ -11,7 +11,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::group(['middleware' => 'mntobr'], function () {
     Route::post('/dpdiario', [PdiarioController::class, 'destroy'])->name('dpdiario');
-    Route::post('/lspdmnt', [PdiarioController::class, 'showmnt'])->name('lspdmnt');
+    Route::get('/lspdmnt', [PdiarioController::class, 'showmnt'])->name('lspdmnt');
 });
 
 Route::group(['middleware' => 'cnt'], function () {
