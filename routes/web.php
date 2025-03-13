@@ -31,11 +31,14 @@ Route::group(['middleware' => 'cnt'], function () {
     Route::get('/equipos', [EquiposController::class, 'index'])->name('lsequipos');
     Route::post('/nequipos', [EquiposController::class, 'nuevo'])->name('nequipos');
     Route::post('/eequipos', [EquiposController::class, 'edit'])->name('eequipos');
-    Route::get('/exportpd/{pd}', [App\Http\Controllers\PdiarioController::class, 'exportpd'])->name('exportpd');
 //xls
     Route::get('/eqxls', [EquiposController::class, 'eqxls'])->name('eqxls');
 });
 
+/// Rutas para Mantenimiento y Obra
+Route::group(['middleware' => 'mntobr'], function () {
+    Route::get('/exportpd/{pd}', [PdiarioController::class, 'exportpd'])->name('exportpd');
+});
 // middleware Jefe de Obra incluye Oficina Central
     Route::group(['middleware' => 'obr'], function () {
 //OBRAS

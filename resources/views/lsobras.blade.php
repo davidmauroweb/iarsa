@@ -76,7 +76,7 @@
                                                 </div>
                                                 </div>
                                                 <div class="row mb-3">
-                                                <label for="licitacion" class="col-md-4 col-form-label text-md-end">{{ __('Pazo') }}</label>
+                                                <label for="licitacion" class="col-md-4 col-form-label text-md-end">{{ __('Plazo') }}</label>
                                                 <div class="col-md-3">
                                                     <input id="licitacion" type="number" class="form-control" name="plazo" value="{{$u->plazo}}" required autocomplete="name" maxlength="3">
                                                 </div>
