@@ -46,15 +46,15 @@
                             </div>
                     </div><!-- ROW -->
                     <div class="row mb-3">
-                            <label for="hora" class="col-md-4 col-form-label text-md-end">{{ __('Horas') }}</label>
+                            <label for="hora" class="col-md-4 col-form-label text-md-end">{{ __('Horas/KM') }}</label>
                             <div class="col-md-6">
-                                <input id="hora" type="number" class="form-control" name="horas" required mint="1" max="250">
+                                <input id="hora" type="number" class="form-control" name="horas" required mint="1" max="1000">
                             </div>
                     </div><!-- ROW -->
                     <div class="row mb-3">
                     <label for="comb" class="col-md-4 col-form-label text-md-end">{{ __('Combustible') }}</label>
                             <div class="col-md-6">
-                                <input id="comb" type="number" class="form-control" name="combustible" required mint="1" max="500">
+                                <input id="comb" type="number" class="form-control" name="combustible" required mint="1" max="5000">
                             </div>
                     </div><!-- ROW -->
                     <div class="row mb-3">
